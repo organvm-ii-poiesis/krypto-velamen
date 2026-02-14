@@ -157,10 +157,10 @@ Each author is studied through a standardized deep-research template producing: 
 |------|-------------|
 | `QUEER-Qv33r-Project-Purpose.md` | Deductive synthesis: Qv33r as living cultural instrument, archival function, anti-futurist stance |
 | `QUEER-Queer-Aesthetic-of-Hiding.md` | Double-channel text model, three author dials, six craft mechanisms, writing rules |
-| `QUEER-AI-prompts-for-QV33R.md` | Deep research prompt templates for all three anchor authors + comparative report + next-author recommendations |
+| `QUEER-AI-prompts-for-QV33R.md` | Deep research prompt templates: three anchor authors + comparative report, plus 25 contextual world-research prompts (Stonewall, queer spaces, digital intimacy, ethics of exposure) |
 | `QUEER-QV33R-Research-Brief-Setup.md` | Full research brief framework: Stonewall through queer world-making, claims ledger, timeline, glossary, case studies |
 | `QUEER-Temporal-Work-and-Struggle.md` | Four-field governance model applied to project (duplicate of shared document) |
-| `ChatGPT-Project Threads Summary.md` | Project thread summary and development notes |
+| `ChatGPT-Project Threads Summary.md` | Project thread summary across ETCETER4 creative universe (unique to this repo) |
 | `Temporal-Work-and-Struggle.md` | Foundational four-field governance model for lifetime creative labor |
 | `ChatGPT-Demons in Paradise Lost.md` | Extended research on Paradise Lost and demonology (shared document) |
 | `ChatGPT-Grinder Blair Witch Fear.md` | Blair Witch fear-profile analysis (shared document) |
@@ -177,7 +177,7 @@ Each author is studied through a standardized deep-research template producing: 
 
 ## Shared Source Material
 
-Eleven files are shared between KRYPTO-VELAMEN and its companion project CHTHON-ONEIROS. These are ChatGPT conversation exports and the foundational *Temporal-Work-and-Struggle.md* document that articulates the four-field model governing both projects. Each repository maintains its own copy as self-contained source material — no deduplication is imposed, because each project reads these documents through its own field lens.
+Ten files are shared between KRYPTO-VELAMEN and its companion project CHTHON-ONEIROS. These are ChatGPT conversation exports and the foundational *Temporal-Work-and-Struggle.md* document that articulates the four-field model governing both projects. Each repository maintains its own copy as self-contained source material — no deduplication is imposed, because each project reads these documents through its own field lens.
 
 ---
 
@@ -201,6 +201,12 @@ Qv33r exists because queer experience is constantly flattened into tropes. Platf
 This project intervenes before meaning settles. It captures the mess while it is happening.
 
 In one sentence: Qv33r is a public, evolving queer archive that documents lived interiority in real time, refusing narrative closure, technological fetishism, or moral framing, in order to preserve what is usually lost, sanitized, or delayed.
+
+### Media Trajectory
+
+The project follows a deliberate phased expansion model: text first, then visual and graphic work, then interviews and oral history, then podcast and reality-TV formats. Text is not a placeholder for richer media — it is the foundational layer because it offers the most direct interface between thought and exposure. Each subsequent medium is introduced only when the textual archive has established enough mass and voice to anchor it.
+
+QUEER/KRYPTO-VELAMEN exists within a broader creative universe that includes ETCETER4, et4L, MET4MORFOSES, AMP LAB MEDIA, and LOCREANCE. Each of these projects is deliberately independent — they share an author but not a creative continuity. QUEER and its companion GRINDER contain no AI elements and are not technologically mediated in their artistic identity, even as the organ system that governs them was articulated through AI-assisted conversation.
 
 ---
 
