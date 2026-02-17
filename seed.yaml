@@ -17,7 +17,28 @@ metadata:
   sprint: "SENSORIA"
   language: mixed
 
-agents: []
+agents:
+  - id: research-executor
+    description: "Executes deep research prompts from the research pipeline"
+    trigger: manual
+    capabilities:
+      - web-search
+      - document-generation
+    output_dir: research/
+
+  - id: catalog-updater
+    description: "Updates CATALOG.md when new documents are added"
+    trigger: on-file-change
+    watches:
+      - "*.md"
+      - "research/*.md"
+    output: CATALOG.md
+
+  - id: companion-sync
+    description: "Checks for updates in shared documents with CHTHON-ONEIROS"
+    trigger: subscription
+    event: theory.published
+    source: ORGAN-I
 
 produces:
   - type: creative-artifact
