@@ -40,6 +40,31 @@ agents:
     event: theory.published
     source: ORGAN-I
 
+  - id: synthesis-updater
+    description: "Flags when synthesis documents may need updating after new research"
+    trigger: on-file-change
+    watches:
+      - "research/*-deep-research.md"
+    output_dir: research/synthesis/
+
+  - id: fragment-validator
+    description: "Validates fragment YAML frontmatter and completeness"
+    trigger: manual
+    capabilities:
+      - python-exec
+    command: "python tools/validate.py"
+    output_dir: drafts/
+
+  - id: encoding-engine
+    description: "Scaffolds new fragments, validates schemas, looks up mechanisms"
+    trigger: manual
+    capabilities:
+      - python-exec
+    tools:
+      - tools/scaffold.py
+      - tools/validate.py
+      - tools/lookup.py
+
 produces:
   - type: creative-artifact
     description: "Generative art, interactive system, or experiential work"

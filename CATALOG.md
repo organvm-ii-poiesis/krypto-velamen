@@ -3,7 +3,7 @@
 **Repository:** `organvm-ii-poiesis/krypto-velamen`
 **Project:** QV33R / QUEER -- A Living Queer Archive
 **Generated:** 2026-02-17
-**Catalog Version:** 2.0
+**Catalog Version:** 3.0
 
 ---
 
@@ -11,7 +11,7 @@
 
 | Metric | Value |
 |--------|-------|
-| Total files | 40 (root: 19, research/: 19, drafts/: 3) |
+| Total files | 57 (root: 21, research/: 24, research/synthesis/: 4, drafts/: 3, tools/: 5) |
 | Theory documents | 5 (QUEER-prefixed) |
 | Strategy/growth documents | 4 (ChatGPT exports) |
 | Thread summaries | 3 (ChatGPT exports) |
@@ -19,10 +19,13 @@
 | Anchor author deep research reports | 3 (Rimbaud, Wilde, Burroughs) |
 | Comparative report | 1 |
 | Next-author deep research reports | 6 (Forster, Cavafy, Baldwin, Genet, Delany, Bishop) |
-| World research briefs | 9 (QV33R World Research Operator) |
+| Second-wave author deep research reports | 2 (Acker, Lorde) |
+| World research briefs | 12 (QV33R World Research Operator) |
+| Research synthesis documents | 4 (Mechanism Atlas, Claims Ledger, Dial Calibration, Author Crosswalk) |
 | Creative scaffolding files | 3 (README, TEMPLATE, ENCODING-WORKSHEET) |
+| Encoding engine tools | 3 Python CLI scripts (scaffold, validate, lookup) |
 | Infrastructure files | 3 (CLAUDE.md, CATALOG.md, seed.yaml) |
-| Estimated total word count | ~350,000+ |
+| Estimated total word count | ~450,000+ |
 
 ---
 
@@ -84,7 +87,7 @@
 |----------|------|-------------|
 | CLAUDE.md | project_config | Project instructions for Claude Code -- core model, dials, mechanisms, encoding schema, constraints, directory structure, external stores |
 | CATALOG.md | index | This file -- structured document index for the repository |
-| seed.yaml | automation | Automation contract -- 3 agent definitions (research, world-research, creative) |
+| seed.yaml | automation | Automation contract -- 6 agent definitions (research, catalog, companion, synthesis, fragment-validator, encoding-engine) |
 | README.md | documentation | Project overview and repository guide |
 
 ---
@@ -120,6 +123,15 @@ Reports following the same template as anchor authors, covering 6 priority autho
 | delany-deep-research.md | Samuel R. Delany | C: Control Systems | 501 | 89,899 | 17 | 24 |
 | bishop-deep-research.md | Elizabeth Bishop | A: Lyric Displacement | 503 | 85,734 | 12+ | 25 |
 
+### Second-Wave Author Deep Research
+
+Reports following the same template, filling representational gaps flagged by the comparative report.
+
+| Filename | Author | Cluster | Lines | Size (bytes) | Mechanisms | Claims |
+|----------|--------|---------|------:|-------------:|-----------:|-------:|
+| acker-deep-research.md | Kathy Acker | C: Control Systems | 479 | 68,332 | 12 | 20 |
+| lorde-deep-research.md | Audre Lorde | E: Schema Expansion | 475 | 71,265 | 13 | 17 |
+
 ### World Research Briefs
 
 Reports following the QV33R World Research Operator template: Topic Scope, Reality vs Artifice (World A / World B), Timeline (12-20 entries), Glossary (12-20 terms), Case Studies (3-5), Claims Ledger, Research Gaps.
@@ -135,8 +147,22 @@ Reports following the QV33R World Research Operator template: Topic Scope, Reali
 | world-07-futurisms-innovation.md | Futurisms & Emerging Innovations | 565 | 78,644 |
 | world-08-ethics-governance.md | Ethics, Safety, Governance | 524 | 79,871 |
 | world-09-virtual-activism.md | Virtual↔Real-World Activism | 590 | 89,755 |
+| world-11-language-codes.md | Language Codes & Queer Semiotics | 476 | 50,201 |
+| world-12-music-sonic.md | Music & Sonic Environments | 402 | 84,083 |
+| world-23-eco-queer.md | Eco-Queer Futures | 354 | 67,294 |
 
-**Research totals:** 19 files, 9,334 lines, ~1.5 MB
+### Research Synthesis Documents (research/synthesis/)
+
+Cross-cutting instruments synthesized from all author research reports. Designed for mid-draft lookup during creative work.
+
+| Filename | Lines | Size (bytes) | Description |
+|----------|------:|-------------:|-------------|
+| MECHANISM-ATLAS.md | 1,151 | 113,520 | 96 mechanisms from 11 authors: alphabetical inventory with craft rules, mechanism-to-dial matrix, cluster distribution |
+| CLAIMS-LEDGER.md | 419 | 87,430 | 191 consolidated claims from all reports: cross-validation status (unique/corroborated/contested), confidence scores |
+| DIAL-CALIBRATION.md | 325 | 33,923 | 6 preset configurations with activated mechanisms, example passages, recommended mask/signal types, sample walkthroughs |
+| AUTHOR-CROSSWALK.md | 280 | 48,795 | 11-author × 7-variable comparison grid: per-cell technique descriptions with key examples |
+
+**Research totals:** 28 files, 13,695 lines, ~2.2 MB
 
 ---
 
@@ -147,6 +173,22 @@ Reports following the QV33R World Research Operator template: Topic Scope, Reali
 | README.md | guide | ~30 | Creative constraints for Field I text production |
 | TEMPLATE.md | template | 79 | Fragment template with YAML frontmatter (3 dials, 7 encoding variables, 6 mechanism checkboxes), surface/substrate notes, self-check questions |
 | ENCODING-WORKSHEET.md | worksheet | 219 | 7-variable walkthrough with diagnostic questions, example intensities, 7 mask types, 6 signal types, deniability calibration, affect cost patterns, 6 sample dial configurations, mechanism cross-reference |
+
+---
+
+## Encoding Engine (tools/)
+
+Three Python CLI scripts for working with the QV33R encoding schema. Requires Python 3.10+ and PyYAML.
+
+| Filename | Type | Lines | Description |
+|----------|------|------:|-------------|
+| scaffold.py | CLI tool | 244 | Creates dated fragment files from TEMPLATE.md with 6 preset dial configurations or interactive mode |
+| validate.py | CLI tool | 167 | Validates YAML frontmatter: required fields, dial ranges, enum values, fragment section non-empty |
+| lookup.py | CLI tool | 232 | Queries MECHANISM-ATLAS.md by dial settings, mechanism name, or author attribution |
+| README.md | documentation | 89 | Tool usage, presets table, workflow guide |
+| requirements.txt | config | 1 | `PyYAML>=6.0` |
+
+**Workflow**: `scaffold.py` → write fragment → `validate.py` → `lookup.py` for mechanism discovery
 
 ---
 
@@ -234,6 +276,13 @@ An alphabetical index of core concepts, encoding variables, and craft mechanisms
 | Jean Genet | C→A Bridge | genet-deep-research.md | Obscenity as counter-censorship; liturgical inversion |
 | Samuel R. Delany | C: Control Systems | delany-deep-research.md | Genre as compositional engine; world-building as encoding |
 | Elizabeth Bishop | A: Lyric Displacement | bishop-deep-research.md | Precision as concealment; negative space as primary content |
+
+### Second-Wave Authors (Deep Research Complete)
+
+| Author | Cluster | Report | Key Mechanism |
+|--------|---------|--------|---------------|
+| Kathy Acker | C: Control Systems | acker-deep-research.md | Literary piracy as encoding; identity fragmentation as deniability |
+| Audre Lorde | E: Schema Expansion | lorde-deep-research.md | Biomythography as dual-channel; intersectional mutual camouflage |
 
 ### Cluster A -- Lyric Displacement (Rimbaud-adjacent)
 
@@ -334,33 +383,57 @@ Presence of major concepts across the corpus. An `x` indicates the concept is de
 
 | # | Filename | Size (bytes) | Type | Lines |
 |---|----------|-------------:|------|------:|
-| 22 | baldwin-deep-research.md | 86,255 | next-author | 533 |
-| 23 | bishop-deep-research.md | 85,734 | next-author | 503 |
-| 24 | burroughs-deep-research.md | 66,185 | anchor | 353 |
-| 25 | cavafy-deep-research.md | 72,925 | next-author | 550 |
-| 26 | comparative-report.md | 98,932 | comparative | 703 |
-| 27 | delany-deep-research.md | 89,899 | next-author | 501 |
-| 28 | forster-deep-research.md | 83,713 | next-author | 589 |
-| 29 | genet-deep-research.md | 96,344 | next-author | 496 |
-| 30 | rimbaud-deep-research.md | 55,927 | anchor | 420 |
-| 31 | wilde-deep-research.md | 51,786 | anchor | 413 |
-| 32 | world-01-stonewall-activism.md | 71,285 | world-research | 445 |
-| 33 | world-02-queer-spaces.md | 68,688 | world-research | 386 |
-| 34 | world-03-chosen-families.md | 60,319 | world-research | 402 |
-| 35 | world-04-intersectional-activism.md | 71,434 | world-research | 366 |
-| 36 | world-05-creative-frameworks.md | 80,467 | world-research | 519 |
-| 37 | world-06-cultural-histories.md | 85,903 | world-research | 476 |
-| 38 | world-07-futurisms-innovation.md | 78,644 | world-research | 565 |
-| 39 | world-08-ethics-governance.md | 79,871 | world-research | 524 |
-| 40 | world-09-virtual-activism.md | 89,755 | world-research | 590 |
+| 22 | acker-deep-research.md | 68,332 | second-wave | 479 |
+| 23 | baldwin-deep-research.md | 86,255 | next-author | 533 |
+| 24 | bishop-deep-research.md | 85,734 | next-author | 503 |
+| 25 | burroughs-deep-research.md | 66,185 | anchor | 353 |
+| 26 | cavafy-deep-research.md | 72,925 | next-author | 550 |
+| 27 | comparative-report.md | 98,932 | comparative | 703 |
+| 28 | delany-deep-research.md | 89,899 | next-author | 501 |
+| 29 | forster-deep-research.md | 83,713 | next-author | 589 |
+| 30 | genet-deep-research.md | 96,344 | next-author | 496 |
+| 31 | lorde-deep-research.md | 71,265 | second-wave | 475 |
+| 32 | rimbaud-deep-research.md | 55,927 | anchor | 420 |
+| 33 | wilde-deep-research.md | 51,786 | anchor | 413 |
+| 34 | world-01-stonewall-activism.md | 71,285 | world-research | 445 |
+| 35 | world-02-queer-spaces.md | 68,688 | world-research | 386 |
+| 36 | world-03-chosen-families.md | 60,319 | world-research | 402 |
+| 37 | world-04-intersectional-activism.md | 71,434 | world-research | 366 |
+| 38 | world-05-creative-frameworks.md | 80,467 | world-research | 519 |
+| 39 | world-06-cultural-histories.md | 85,903 | world-research | 476 |
+| 40 | world-07-futurisms-innovation.md | 78,644 | world-research | 565 |
+| 41 | world-08-ethics-governance.md | 79,871 | world-research | 524 |
+| 42 | world-09-virtual-activism.md | 89,755 | world-research | 590 |
+| 43 | world-11-language-codes.md | 50,201 | world-research | 476 |
+| 44 | world-12-music-sonic.md | 84,083 | world-research | 402 |
+| 45 | world-23-eco-queer.md | 67,294 | world-research | 354 |
+
+### Research Synthesis (research/synthesis/)
+
+| # | Filename | Size (bytes) | Type | Lines |
+|---|----------|-------------:|------|------:|
+| 46 | AUTHOR-CROSSWALK.md | 48,795 | synthesis | 280 |
+| 47 | CLAIMS-LEDGER.md | 87,430 | synthesis | 419 |
+| 48 | DIAL-CALIBRATION.md | 33,923 | synthesis | 325 |
+| 49 | MECHANISM-ATLAS.md | 113,520 | synthesis | 1,151 |
 
 ### Drafts (drafts/)
 
 | # | Filename | Size (bytes) | Type | Lines |
 |---|----------|-------------:|------|------:|
-| 41 | ENCODING-WORKSHEET.md | 11,945 | worksheet | 219 |
-| 42 | README.md | 826 | guide | ~30 |
-| 43 | TEMPLATE.md | 3,027 | template | 79 |
+| 50 | ENCODING-WORKSHEET.md | 11,945 | worksheet | 219 |
+| 51 | README.md | 826 | guide | ~30 |
+| 52 | TEMPLATE.md | 3,027 | template | 79 |
+
+### Tools (tools/)
+
+| # | Filename | Size (bytes) | Type | Lines |
+|---|----------|-------------:|------|------:|
+| 53 | lookup.py | 8,553 | CLI tool | 232 |
+| 54 | README.md | 2,688 | documentation | 89 |
+| 55 | requirements.txt | 12 | config | 1 |
+| 56 | scaffold.py | 7,997 | CLI tool | 244 |
+| 57 | validate.py | 5,953 | CLI tool | 167 |
 
 ---
 
@@ -374,4 +447,4 @@ Presence of major concepts across the corpus. An `x` indicates the concept is de
 
 ---
 
-*Catalog generated 2026-02-17 for KRYPTO-VELAMEN (Organ II -- POIESIS). Version 2.0 reflects Phase 3 completion: creative scaffolding, 9 world research briefs, 6 next-author deep research reports, and updated infrastructure. This document is descriptive, not prescriptive. It indexes what exists in the repository; it does not govern what should exist.*
+*Catalog generated 2026-02-17 for KRYPTO-VELAMEN (Organ II -- POIESIS). Version 3.0 reflects Phase 4 completion: 4 research synthesis instruments, 2 second-wave author reports (Acker, Lorde), 3 additional world research briefs, 3 Python CLI encoding engine tools, and updated infrastructure. 57 files total. This document is descriptive, not prescriptive. It indexes what exists in the repository; it does not govern what should exist.*
