@@ -63,6 +63,20 @@ services:
     depends_on:
       - community-service
 
+  # The Law (Titan Governor)
+  titan-governor:
+    build:
+      context: ../services/titan-governor
+      dockerfile: Dockerfile
+    ports:
+      - "8003:8003"
+    environment:
+      - ARCHIVE_SERVICE_URL=http://archive-engine:8000
+      - AGENT_SWARM_URL=http://agent-swarm:8004
+    depends_on:
+      - agent-swarm
+      - knowledge-graph
+
   # Databases
   db-identity:
     image: postgres:15-alpine
