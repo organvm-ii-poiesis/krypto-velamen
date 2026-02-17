@@ -52,6 +52,7 @@ $SURVEILLANCE_PRESSURE, $PLAUSIBLE_DENIABILITY, $AFFECT_COST
 ## External Stores
 - Knowledge Graph: MCP (106 entities, 118 relations)
 - Neon DB: project snowy-moon-43700360 (13 tables)
+- Companion Neon DB: project plain-wind-21545579 (CHTHON-ONEIROS)
 
 ## Writing Style for Creative Output
 - Contemporary, present-day language (not glitchy or futuristic)

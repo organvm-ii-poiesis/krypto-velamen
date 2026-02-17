@@ -3,7 +3,7 @@
 **Repository:** `organvm-ii-poiesis/krypto-velamen`
 **Project:** QV33R / QUEER -- A Living Queer Archive
 **Generated:** 2026-02-17
-**Catalog Version:** 1.0
+**Catalog Version:** 2.0
 
 ---
 
@@ -11,12 +11,18 @@
 
 | Metric | Value |
 |--------|-------|
-| Total documents | 16 unique (17 files; 1 duplicate pair) |
+| Total files | 40 (root: 19, research/: 19, drafts/: 3) |
 | Theory documents | 5 (QUEER-prefixed) |
 | Strategy/growth documents | 4 (ChatGPT exports) |
 | Thread summaries | 3 (ChatGPT exports) |
 | Shared source material | 10 files shared with companion project CHTHON-ONEIROS |
-| Estimated total word count | ~99,500 |
+| Anchor author deep research reports | 3 (Rimbaud, Wilde, Burroughs) |
+| Comparative report | 1 |
+| Next-author deep research reports | 6 (Forster, Cavafy, Baldwin, Genet, Delany, Bishop) |
+| World research briefs | 9 (QV33R World Research Operator) |
+| Creative scaffolding files | 3 (README, TEMPLATE, ENCODING-WORKSHEET) |
+| Infrastructure files | 3 (CLAUDE.md, CATALOG.md, seed.yaml) |
+| Estimated total word count | ~350,000+ |
 
 ---
 
@@ -72,61 +78,139 @@
 9. ChatGPT-Ways to Share Writing.md
 10. ChatGPT-Project Threads Summary.md
 
+### Infrastructure
+
+| Filename | Type | Description |
+|----------|------|-------------|
+| CLAUDE.md | project_config | Project instructions for Claude Code -- core model, dials, mechanisms, encoding schema, constraints, directory structure, external stores |
+| CATALOG.md | index | This file -- structured document index for the repository |
+| seed.yaml | automation | Automation contract -- 3 agent definitions (research, world-research, creative) |
+| README.md | documentation | Project overview and repository guide |
+
+---
+
+## Research Reports (research/)
+
+### Anchor Author Deep Research
+
+Reports following the full deep research template: Executive Summary, Corpus Map, Encoding Schema (7 variables), Mechanics Atlas (12+ mechanisms), Historical Constraint Layer, Reception & Misreads, Counterclaims, Creator Translation (craft rules), Claims Ledger.
+
+| Filename | Author | Cluster | Lines | Size (bytes) | Mechanisms | Claims |
+|----------|--------|---------|------:|-------------:|-----------:|-------:|
+| rimbaud-deep-research.md | Arthur Rimbaud | A: Lyric Displacement | 420 | 55,927 | 12+ | 15+ |
+| wilde-deep-research.md | Oscar Wilde | B: Style as Alibi | 413 | 51,786 | 12+ | 15+ |
+| burroughs-deep-research.md | William S. Burroughs | C: Control Systems | 353 | 66,185 | 12+ | 15+ |
+
+### Comparative Report
+
+| Filename | Lines | Size (bytes) | Description |
+|----------|------:|-------------:|-------------|
+| comparative-report.md | 703 | 98,932 | Cross-author analysis: 7 universal schema variables, 5 author clusters, 18 next-author recommendations with reading order, research gaps, 20-entry claims ledger |
+
+### Next-Author Deep Research
+
+Reports following the same template as anchor authors, covering 6 priority authors across all clusters.
+
+| Filename | Author | Cluster | Lines | Size (bytes) | Mechanisms | Claims |
+|----------|--------|---------|------:|-------------:|-----------:|-------:|
+| forster-deep-research.md | E. M. Forster | B: Style as Alibi | 589 | 83,713 | 12+ | 16 |
+| cavafy-deep-research.md | Constantine P. Cavafy | A: Lyric Displacement | 550 | 72,925 | 14 | 15+ |
+| baldwin-deep-research.md | James Baldwin | D: Bridge | 533 | 86,255 | 14 | 16 |
+| genet-deep-research.md | Jean Genet | C→A Bridge | 496 | 96,344 | 16 | 25 |
+| delany-deep-research.md | Samuel R. Delany | C: Control Systems | 501 | 89,899 | 17 | 24 |
+| bishop-deep-research.md | Elizabeth Bishop | A: Lyric Displacement | 503 | 85,734 | 12+ | 25 |
+
+### World Research Briefs
+
+Reports following the QV33R World Research Operator template: Topic Scope, Reality vs Artifice (World A / World B), Timeline (12-20 entries), Glossary (12-20 terms), Case Studies (3-5), Claims Ledger, Research Gaps.
+
+| Filename | Topic | Lines | Size (bytes) |
+|----------|-------|------:|-------------:|
+| world-01-stonewall-activism.md | Stonewall & Early Activism | 445 | 71,285 |
+| world-02-queer-spaces.md | Evolution of Queer Spaces (Bars→VR) | 386 | 68,688 |
+| world-03-chosen-families.md | Chosen Families, Mental Health, Impact | 402 | 60,319 |
+| world-04-intersectional-activism.md | Intersectional & Global Queer Activism | 366 | 71,434 |
+| world-05-creative-frameworks.md | Creative Frameworks (Performance, Theory, Lit) | 519 | 80,467 |
+| world-06-cultural-histories.md | Cultural Histories & Expressions | 476 | 85,903 |
+| world-07-futurisms-innovation.md | Futurisms & Emerging Innovations | 565 | 78,644 |
+| world-08-ethics-governance.md | Ethics, Safety, Governance | 524 | 79,871 |
+| world-09-virtual-activism.md | Virtual↔Real-World Activism | 590 | 89,755 |
+
+**Research totals:** 19 files, 9,334 lines, ~1.5 MB
+
+---
+
+## Creative Scaffolding (drafts/)
+
+| Filename | Type | Lines | Description |
+|----------|------|------:|-------------|
+| README.md | guide | ~30 | Creative constraints for Field I text production |
+| TEMPLATE.md | template | 79 | Fragment template with YAML frontmatter (3 dials, 7 encoding variables, 6 mechanism checkboxes), surface/substrate notes, self-check questions |
+| ENCODING-WORKSHEET.md | worksheet | 219 | 7-variable walkthrough with diagnostic questions, example intensities, 7 mask types, 6 signal types, deniability calibration, affect cost patterns, 6 sample dial configurations, mechanism cross-reference |
+
 ---
 
 ## Concept Index
 
 An alphabetical index of core concepts, encoding variables, and craft mechanisms referenced across the corpus. Document filenames indicate where each concept is defined or substantially discussed.
 
-- **Affect Cost** (`$AFFECT_COST`) -- Encoding variable measuring the emotional toll of concealment on the writing subject. See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Affect Cost** (`$AFFECT_COST`) -- Encoding variable measuring the emotional toll of concealment on the writing. Tonal instability, emotional displacement upward, systematic mechanization, fragmented intimacy, abrupt endings, precision as armor. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md, all deep research reports
 
 - **Anti-Futurism** -- Rejection of futurism, transcendence narratives, and technological fetishism. The project is grounded, mundane, ugly, intimate, and immediate. See: QUEER-Qv33r-Project-Purpose.md
 
 - **Archival Function** -- The project's primary function is archival, not narrative. It does not tell a story; it captures a condition. See: QUEER-Qv33r-Project-Purpose.md
 
-- **Camp as Encryption** -- Craft mechanism #5: style as cipher, defensive encoding. The most elaborate surface protecting the most vulnerable truth. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Audience Split** (`$AUDIENCE_SPLIT`) -- Universal variable: the text addresses multiple audiences simultaneously, each receiving different content. See: comparative-report.md, all deep research reports
 
-- **Claims Ledger** -- Research tool tracking core claims with supporting evidence, counterclaims, and resolution status. See: QUEER-QV33R-Research-Brief-Setup.md
+- **Camp as Encryption** -- Craft mechanism #5: style as cipher, defensive encoding. The most elaborate surface protecting the most vulnerable truth. See: QUEER-Queer-Aesthetic-of-Hiding.md, wilde-deep-research.md
 
-- **Conservation Law** -- "No work may remain in a field where it no longer resists me." Resistance is a conserved quantity that cannot be optimized, automated, or faked. See: Temporal-Work-and-Struggle.md, QUEER-Temporal-Work-and-Struggle.md
+- **Claims Ledger** -- Research tool tracking core claims with supporting evidence, counterclaims, and resolution status. See: QUEER-QV33R-Research-Brief-Setup.md, all research reports
 
-- **Double-Channel Text** -- Central formal innovation: writing engineered to operate on two simultaneous frequencies (`$SURFACE_STORY` and `$SUBSTRATE_STORY`). The hiding is not a defect but an aesthetic of constrained transmission. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Conservation Law** -- "No work may remain in a field where it no longer resists me." Resistance is a conserved quantity that cannot be optimized, automated, or faked. See: Temporal-Work-and-Struggle.md
 
-- **Encoding Schema** -- 7-variable portable schema for studying concealed queer desire across authors: `$SURFACE_STORY`, `$SUBSTRATE_STORY`, `$MASK_TYPE`, `$SIGNAL_TYPE`, `$SURVEILLANCE_PRESSURE`, `$PLAUSIBLE_DENIABILITY`, `$AFFECT_COST`. See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Double-Channel Text** -- Central formal innovation: writing engineered to operate on two simultaneous frequencies (`$SURFACE_STORY` and `$SUBSTRATE_STORY`). The hiding is not a defect but an aesthetic of constrained transmission. See: QUEER-Queer-Aesthetic-of-Hiding.md, TEMPLATE.md, all deep research reports
 
-- **Four-Field Model** -- Governance model for lifetime creative labor, comprising Present Waking (Field I), Present Dreaming (Field II), Temporal Antagonism (Field III), and Binding/Translation (Field IV). See: Temporal-Work-and-Struggle.md, QUEER-Temporal-Work-and-Struggle.md
+- **Encoding Schema** -- 7-variable portable schema: `$SURFACE_STORY`, `$SUBSTRATE_STORY`, `$MASK_TYPE`, `$SIGNAL_TYPE`, `$SURVEILLANCE_PRESSURE`, `$PLAUSIBLE_DENIABILITY`, `$AFFECT_COST`. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md, TEMPLATE.md
 
-- **Irreversible Exposure** -- The activation condition for Field I. Text released without scaffolding, framing, or thesis defense. If it feels safe to post, it does not belong in Field I yet. See: QUEER-Qv33r-Project-Purpose.md, QUEER-Queer-Aesthetic-of-Hiding.md
+- **Four-Field Model** -- Governance model for lifetime creative labor: Present Waking (Field I), Present Dreaming (Field II), Temporal Antagonism (Field III), Binding/Translation (Field IV). See: Temporal-Work-and-Struggle.md
+
+- **Genre Alibi** (`$GENRE_ALIBI`) -- Universal variable: formal or generic structure that provides the cover story. Types include voyant alibi, aesthetic alibi, systems metaphor, genre displacement, confessional redirect, camp, precision as concealment. See: comparative-report.md, ENCODING-WORKSHEET.md
+
+- **Irreversible Exposure** -- The activation condition for Field I. Text released without scaffolding, framing, or thesis defense. If it feels safe to post, it does not belong in Field I yet. See: QUEER-Qv33r-Project-Purpose.md
 
 - **Living Cultural Instrument** -- Core identity of the QV33R project. Not a story, a platform, or a brand, but a public, evolving queer archive of lived reality. See: QUEER-Qv33r-Project-Purpose.md
 
-- **Mask Type** (`$MASK_TYPE`) -- Encoding variable for the type of concealment used (e.g., euphemism, allegory, genre deflection). See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Mask Type** (`$MASK_TYPE`) -- Encoding variable for the formal structure providing the cover story. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md
 
 - **Media Trajectory** -- Phased expansion model: text first, then visual/graphic work, then interviews/oral history, then podcast/reality-TV formats. See: QUEER-Qv33r-Project-Purpose.md
 
-- **Negative Space as Content** -- Craft mechanism #2: ellipsis, hard cuts, redactions, skipped causality, interrupted scenes. The absence becomes the loudest data. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Negative Space as Content** -- Craft mechanism #2: ellipsis, hard cuts, redactions, skipped causality, interrupted scenes. The absence becomes the loudest data. See: QUEER-Queer-Aesthetic-of-Hiding.md, bishop-deep-research.md, cavafy-deep-research.md
 
 - **Overdetermined Innocent Details** -- Craft mechanism #3: atmospheric details (a look held too long, the timing of a departure) that are the substrate plot on the second channel. See: QUEER-Queer-Aesthetic-of-Hiding.md
 
-- **Plausible Deniability** (`$PLAUSIBLE_DENIABILITY`) -- Encoding variable measuring the strength of the surface cover story. See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Plausible Deniability** (`$PLAUSIBLE_DENIABILITY`) -- Encoding variable measuring the strength of the surface cover story. Calibrated 1-5; Field I aims for 2-4. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md
 
-- **Pronoun Drift** -- Craft mechanism #1: referential blur and unstable reference. Names disappear; pronouns oscillate; the sentence refuses to pin the beloved down. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Pronoun Drift** -- Craft mechanism #1: referential blur and unstable reference. Names disappear; pronouns oscillate; the sentence refuses to pin the beloved down. See: QUEER-Queer-Aesthetic-of-Hiding.md, rimbaud-deep-research.md
 
-- **Public Creation** -- Building in public with audience participation. The archive only works if it is contemporaneous with its own conditions of production. See: QUEER-Qv33r-Project-Purpose.md, ChatGPT-Queer Project Growth Strategy.md, ChatGPT-QUEER Growth Strategy.md
+- **Public Creation** -- Building in public with audience participation. The archive only works if it is contemporaneous with its own conditions of production. See: QUEER-Qv33r-Project-Purpose.md
 
-- **Public Mask vs Private Voice** -- Craft mechanism #4: friction between social persona (performed in dialogue) and interiority (revealed through camera angle, stage direction, narration). See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Public Mask vs Private Voice** -- Craft mechanism #4: friction between social persona (performed in dialogue) and interiority (revealed through camera angle, stage direction, narration). See: QUEER-Queer-Aesthetic-of-Hiding.md, wilde-deep-research.md, forster-deep-research.md
 
 - **Resistance as Conserved Quantity** -- Foundational principle: resistance cannot be optimized, automated, or faked. Work must move when it no longer resists the maker. See: Temporal-Work-and-Struggle.md
 
-- **Signal Type** (`$SIGNAL_TYPE`) -- Encoding variable for the type of recognition signal used (e.g., coded language, glance, tone). See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Risk Budget** (`$RISK_BUDGET`) -- Universal variable: the total amount of danger a writer absorbs. See: comparative-report.md, genet-deep-research.md
 
-- **Substrate Story** (`$SUBSTRATE_STORY`) -- The hidden architecture of the double-channel text: what a queer-attuned reader detects as the real emotional plot beneath the surface. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Signal Type** (`$SIGNAL_TYPE`) -- Encoding variable for how the substrate leaks through: sensory surplus, recognition trigger, structural paranoia, pronoun drift, negative space, overdetermined detail. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md
 
-- **Surface Story** (`$SURFACE_STORY`) -- The publicly legible layer of the double-channel text: atmospheric, literary, complete on its own terms. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Substrate Story** (`$SUBSTRATE_STORY`) -- The hidden architecture of the double-channel text: what a queer-attuned reader detects as the real emotional plot beneath the surface. See: QUEER-Queer-Aesthetic-of-Hiding.md, TEMPLATE.md
 
-- **Surveillance as Third Entity** -- Craft mechanism #6: the internalized watcher shapes the sentence. Self-correction, hedging, jokes that arrive too early, sudden moralizing that feels like cover. See: QUEER-Queer-Aesthetic-of-Hiding.md
+- **Surface Story** (`$SURFACE_STORY`) -- The publicly legible layer of the double-channel text: atmospheric, literary, complete on its own terms. See: QUEER-Queer-Aesthetic-of-Hiding.md, TEMPLATE.md
 
-- **Surveillance Pressure** (`$SURVEILLANCE_PRESSURE`) -- Encoding variable measuring the intensity of external monitoring on the writing subject. See: QUEER-Queer-Aesthetic-of-Hiding.md, QUEER-AI-prompts-for-QV33R.md
+- **Surveillance as Third Entity** -- Craft mechanism #6: the internalized watcher shapes the sentence. Self-correction, hedging, jokes that arrive too early, sudden moralizing that feels like cover. See: QUEER-Queer-Aesthetic-of-Hiding.md, burroughs-deep-research.md
+
+- **Surveillance Pressure** (`$SURVEILLANCE_PRESSURE`) -- Encoding variable measuring the intensity of external monitoring. Contemporary sources: social media, family, professional, community, legal/state, self. See: QUEER-Queer-Aesthetic-of-Hiding.md, ENCODING-WORKSHEET.md
+
+- **Temporal Displacement** -- Universal variable: desire located in the past or in historical frames as encryption strategy. See: comparative-report.md, cavafy-deep-research.md
 
 ---
 
@@ -134,27 +218,42 @@ An alphabetical index of core concepts, encoding variables, and craft mechanisms
 
 ### Anchor Authors (Three Dials)
 
-| Author | Dial | Cluster | Hiding Looks Like |
-|--------|------|---------|-------------------|
-| Arthur Rimbaud | `$RIMBAUD_DRIFT` (Desire as Weather) | A: Lyric Displacement | Weather: atmospheric, overwhelming, impossible to point at |
-| Oscar Wilde | `$WILDE_MASK` (Truth as Performance) | B: Style as Alibi | Wit, poise, ornament: visible surface concealing dangerous content |
-| William S. Burroughs | `$BURROUGHS_CONTROL` (Desire Under Surveillance) | C: Control Systems | Systems, threat, glitch, coercion: desire through surveillance language |
+| Author | Dial | Cluster | Report | Hiding Looks Like |
+|--------|------|---------|--------|-------------------|
+| Arthur Rimbaud | `$RIMBAUD_DRIFT` (Desire as Weather) | A: Lyric Displacement | rimbaud-deep-research.md | Weather: atmospheric, overwhelming, impossible to point at |
+| Oscar Wilde | `$WILDE_MASK` (Truth as Performance) | B: Style as Alibi | wilde-deep-research.md | Wit, poise, ornament: visible surface concealing dangerous content |
+| William S. Burroughs | `$BURROUGHS_CONTROL` (Desire Under Surveillance) | C: Control Systems | burroughs-deep-research.md | Systems, threat, glitch, coercion: desire through surveillance language |
+
+### Next Authors (Deep Research Complete)
+
+| Author | Cluster | Report | Key Mechanism |
+|--------|---------|--------|---------------|
+| E. M. Forster | B: Style as Alibi | forster-deep-research.md | Threshold arrest; the novel that stops before arriving |
+| Constantine P. Cavafy | A: Lyric Displacement | cavafy-deep-research.md | Temporal displacement; desire located in antiquity |
+| James Baldwin | D: Bridge | baldwin-deep-research.md | Racial erasure as sexual encryption; double concealment |
+| Jean Genet | C→A Bridge | genet-deep-research.md | Obscenity as counter-censorship; liturgical inversion |
+| Samuel R. Delany | C: Control Systems | delany-deep-research.md | Genre as compositional engine; world-building as encoding |
+| Elizabeth Bishop | A: Lyric Displacement | bishop-deep-research.md | Precision as concealment; negative space as primary content |
 
 ### Cluster A -- Lyric Displacement (Rimbaud-adjacent)
 
-Jean Genet, Marcel Proust, Constantine P. Cavafy, Federico Garcia Lorca, Hart Crane, Gerard Manley Hopkins, Elizabeth Bishop
+Constantine P. Cavafy, Elizabeth Bishop, Federico Garcia Lorca, Hart Crane, Gerard Manley Hopkins, Jean Genet (bridge)
 
 ### Cluster B -- Style as Alibi (Wilde-adjacent)
 
-Henry James, E. M. Forster, Ronald Firbank, Truman Capote, Noel Coward, W. H. Auden
+E. M. Forster, Henry James, Ronald Firbank, Truman Capote, Noel Coward, W. H. Auden
 
 ### Cluster C -- Control Systems (Burroughs-adjacent)
 
-Jean Cocteau, Samuel R. Delany, Dennis Cooper, Kathy Acker, Yukio Mishima, James Purdy
+Samuel R. Delany, Jean Cocteau, Dennis Cooper, Kathy Acker, Yukio Mishima, James Purdy
 
 ### Cluster D -- Modernity / Bridges
 
-James Baldwin, Djuna Barnes, Virginia Woolf, Tennessee Williams, Monique Wittig, Clarice Lispector
+James Baldwin, Djuna Barnes, Virginia Woolf, Tennessee Williams, Monique Wittig, Clarice Lispector, Marcel Proust
+
+### Cluster E -- Expanding the Schema
+
+Audre Lorde, Reinaldo Arenas
 
 ### Reference Artists (Four-Field Model Validation)
 
@@ -175,31 +274,23 @@ Presence of major concepts across the corpus. An `x` indicates the concept is de
 | AI-Prompts | QUEER-AI-prompts-for-QV33R.md |
 | Research-Brief | QUEER-QV33R-Research-Brief-Setup.md |
 | Temporal | QUEER-Temporal-Work-and-Struggle.md / Temporal-Work-and-Struggle.md |
-| Growth-1 | ChatGPT-QUEER Growth Strategy.md |
-| Growth-2 | ChatGPT-Queer Project Growth Strategy.md |
-| Monetization | ChatGPT-Monetization Strategy Priorities.md |
-| Release | ChatGPT-Release Strategy Enhancement.md |
-| Share | ChatGPT-Ways to Share Writing.md |
-| Threads-Proj | ChatGPT-Project Threads Summary.md |
-| Threads-QUEER | ChatGPT-QUEER Project Thread Summary.md |
-| Threads-GRINDER | ChatGPT-GRINDER Project Threads Summary.md |
-| Demons | ChatGPT-Demons in Paradise Lost.md |
-| Blair-Witch | ChatGPT-Grinder Blair Witch Fear.md |
-| Grinder-Public | ChatGPT-Grinder Project Public Creation.md |
+| Comparative | research/comparative-report.md |
+| Worksheet | drafts/ENCODING-WORKSHEET.md |
+| Template | drafts/TEMPLATE.md |
 
-| Concept | Purpose | Aesthetic | AI-Prompts | Research-Brief | Temporal | Growth-1 | Growth-2 | Monetization | Release | Share | Threads-Proj | Threads-QUEER | Threads-GRINDER | Demons | Blair-Witch | Grinder-Public |
-|---------|---------|-----------|------------|----------------|----------|----------|----------|--------------|---------|-------|--------------|---------------|-----------------|--------|-------------|----------------|
-| Double-Channel Text | x | x | x | x | | | | | | | | x | | | | |
-| Four-Field Model | x | | | | x | | | | | | | | | | | |
-| Conservation Law | | | | | x | | | | | | | | | | | |
-| Six Craft Mechanisms | | x | x | | | | | | | | | | | | | |
-| Three Author Dials | | x | x | | | | | | | | | | | | | |
-| Encoding Schema | | x | x | x | | | | | | | | | | | | |
-| Research Clusters | | x | x | x | | | | | | | | | | | | |
-| Anti-Futurism | x | | | | | | x | | | | | | | | | |
-| Media Trajectory | x | | | | | | x | | x | x | x | x | | | | |
-| Public Creation | x | | | | | x | x | | | | | x | | | | x |
-| Monetization Strategy | | | | | | | | x | x | x | x | | | | | |
+| Concept | Purpose | Aesthetic | AI-Prompts | Research-Brief | Temporal | Comparative | Worksheet | Template |
+|---------|---------|-----------|------------|----------------|----------|-------------|-----------|----------|
+| Double-Channel Text | x | x | x | x | | x | x | x |
+| Four-Field Model | x | | | | x | | | |
+| Conservation Law | | | | | x | | | |
+| Six Craft Mechanisms | | x | x | | | x | x | x |
+| Three Author Dials | | x | x | | | x | x | x |
+| Encoding Schema (7 vars) | | x | x | x | | x | x | x |
+| Research Clusters | | x | x | x | | x | | |
+| Anti-Futurism | x | | | | | | | |
+| Universal Variables (13) | | | | | | x | | |
+| Media Trajectory | x | | | | | | | |
+| Public Creation | x | | | | | | | |
 
 ---
 
@@ -211,28 +302,76 @@ Presence of major concepts across the corpus. An `x` indicates the concept is de
 
 ---
 
-## File Inventory (alphabetical)
+## File Inventory (alphabetical by directory)
+
+### Root (/)
 
 | # | Filename | Size (bytes) | Classification |
 |---|----------|-------------:|----------------|
-| 1 | ChatGPT-Demons in Paradise Lost.md | 448,252 | shared |
-| 2 | ChatGPT-Grinder Blair Witch Fear.md | 2,789 | shared |
-| 3 | ChatGPT-Grinder Project Public Creation.md | 23,939 | shared |
-| 4 | ChatGPT-GRINDER Project Threads Summary.md | 10,172 | thread_summary / shared |
-| 5 | ChatGPT-Monetization Strategy Priorities.md | 25,633 | strategy / shared |
-| 6 | ChatGPT-Project Threads Summary.md | 9,792 | thread_summary / shared |
-| 7 | ChatGPT-QUEER Growth Strategy.md | 8,832 | strategy |
-| 8 | ChatGPT-Queer Project Growth Strategy.md | 17,686 | strategy |
-| 9 | ChatGPT-QUEER Project Thread Summary.md | 5,882 | thread_summary |
-| 10 | ChatGPT-Release Strategy Enhancement.md | 2,385 | strategy / shared |
-| 11 | ChatGPT-Ways to Share Writing.md | 9,305 | strategy / shared |
-| 12 | QUEER-AI-prompts-for-QV33R.md | 34,670 | research |
-| 13 | QUEER-Queer-Aesthetic-of-Hiding.md | 14,554 | theory |
-| 14 | QUEER-Qv33r-Project-Purpose.md | 3,875 | theory |
-| 15 | QUEER-QV33R-Research-Brief-Setup.md | 58,065 | research |
-| 16 | QUEER-Temporal-Work-and-Struggle.md | 22,929 | theory / shared |
-| 17 | Temporal-Work-and-Struggle.md | 22,929 | shared (duplicate of #16) |
+| 1 | CATALOG.md | -- | index (this file) |
+| 2 | ChatGPT-Demons in Paradise Lost.md | 448,252 | shared |
+| 3 | ChatGPT-Grinder Blair Witch Fear.md | 2,789 | shared |
+| 4 | ChatGPT-Grinder Project Public Creation.md | 23,939 | shared |
+| 5 | ChatGPT-GRINDER Project Threads Summary.md | 10,172 | thread_summary / shared |
+| 6 | ChatGPT-Monetization Strategy Priorities.md | 25,633 | strategy / shared |
+| 7 | ChatGPT-Project Threads Summary.md | 9,792 | thread_summary / shared |
+| 8 | ChatGPT-QUEER Growth Strategy.md | 8,832 | strategy |
+| 9 | ChatGPT-Queer Project Growth Strategy.md | 17,686 | strategy |
+| 10 | ChatGPT-QUEER Project Thread Summary.md | 5,882 | thread_summary |
+| 11 | ChatGPT-Release Strategy Enhancement.md | 2,385 | strategy / shared |
+| 12 | ChatGPT-Ways to Share Writing.md | 9,305 | strategy / shared |
+| 13 | CLAUDE.md | 2,517 | project_config |
+| 14 | QUEER-AI-prompts-for-QV33R.md | 34,670 | research |
+| 15 | QUEER-Queer-Aesthetic-of-Hiding.md | 14,554 | theory |
+| 16 | QUEER-Qv33r-Project-Purpose.md | 3,875 | theory |
+| 17 | QUEER-QV33R-Research-Brief-Setup.md | 58,065 | research |
+| 18 | QUEER-Temporal-Work-and-Struggle.md | 22,929 | theory / shared |
+| 19 | README.md | 15,586 | documentation |
+| 20 | seed.yaml | 1,566 | automation |
+| 21 | Temporal-Work-and-Struggle.md | 22,929 | shared (duplicate of #18) |
+
+### Research (research/)
+
+| # | Filename | Size (bytes) | Type | Lines |
+|---|----------|-------------:|------|------:|
+| 22 | baldwin-deep-research.md | 86,255 | next-author | 533 |
+| 23 | bishop-deep-research.md | 85,734 | next-author | 503 |
+| 24 | burroughs-deep-research.md | 66,185 | anchor | 353 |
+| 25 | cavafy-deep-research.md | 72,925 | next-author | 550 |
+| 26 | comparative-report.md | 98,932 | comparative | 703 |
+| 27 | delany-deep-research.md | 89,899 | next-author | 501 |
+| 28 | forster-deep-research.md | 83,713 | next-author | 589 |
+| 29 | genet-deep-research.md | 96,344 | next-author | 496 |
+| 30 | rimbaud-deep-research.md | 55,927 | anchor | 420 |
+| 31 | wilde-deep-research.md | 51,786 | anchor | 413 |
+| 32 | world-01-stonewall-activism.md | 71,285 | world-research | 445 |
+| 33 | world-02-queer-spaces.md | 68,688 | world-research | 386 |
+| 34 | world-03-chosen-families.md | 60,319 | world-research | 402 |
+| 35 | world-04-intersectional-activism.md | 71,434 | world-research | 366 |
+| 36 | world-05-creative-frameworks.md | 80,467 | world-research | 519 |
+| 37 | world-06-cultural-histories.md | 85,903 | world-research | 476 |
+| 38 | world-07-futurisms-innovation.md | 78,644 | world-research | 565 |
+| 39 | world-08-ethics-governance.md | 79,871 | world-research | 524 |
+| 40 | world-09-virtual-activism.md | 89,755 | world-research | 590 |
+
+### Drafts (drafts/)
+
+| # | Filename | Size (bytes) | Type | Lines |
+|---|----------|-------------:|------|------:|
+| 41 | ENCODING-WORKSHEET.md | 11,945 | worksheet | 219 |
+| 42 | README.md | 826 | guide | ~30 |
+| 43 | TEMPLATE.md | 3,027 | template | 79 |
 
 ---
 
-*Catalog generated 2026-02-17 for KRYPTO-VELAMEN (Organ II -- POIESIS). This document is descriptive, not prescriptive. It indexes what exists in the repository; it does not govern what should exist.*
+## External Stores
+
+| Store | Location | Contents |
+|-------|----------|----------|
+| Knowledge Graph | MCP (memory graph) | 106+ entities, 118+ relations -- authors, mechanisms, concepts, documents |
+| Neon DB | project snowy-moon-43700360 | 13 tables, 154+ rows -- documents, authors, concepts, claims, mechanisms |
+| Companion Neon DB | project plain-wind-21545579 | CHTHON-ONEIROS (Field II: Present Dreaming) |
+
+---
+
+*Catalog generated 2026-02-17 for KRYPTO-VELAMEN (Organ II -- POIESIS). Version 2.0 reflects Phase 3 completion: creative scaffolding, 9 world research briefs, 6 next-author deep research reports, and updated infrastructure. This document is descriptive, not prescriptive. It indexes what exists in the repository; it does not govern what should exist.*
