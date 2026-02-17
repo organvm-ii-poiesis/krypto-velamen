@@ -56,7 +56,26 @@ You can treat these as three dials in your project:
 | $WILDE_MASK | wit, poise, ornament | truth as performance |
 | $BURROUGHS_CONTROL | systems, threat, glitch, coercion | desire under surveillance |
 
-## A practical writing rule for QUEER
+## The Aesthetic of Exposure: Visibility as Encoding
+
+While the primary model focuses on concealment, the "Lorde Insight" reveals a second polarity: **Visibility Mode**. In this mode, the writer does not hide; they expose. The double channel is produced not by what is missing, but by what is *too much* for the audience to hold.
+
+### Key Features of Visibility Encoding
+
+1. **Intersectional Mutual Camouflage**: By being visible on multiple axes simultaneously (e.g., Black, lesbian, mother, warrior, poet), the writer allows the audience's own categorical limitations to function as a filter. The axis the reader cannot process becomes the substrate.
+2. **Biomythography**: Inventing a genre that fuses autobiography (surface) with mythology (substrate). The personal story is visible, but its cosmological significance is only legible to the attuned.
+3. **The Toll of Exposure**: The `$AFFECT_COST` inverts. Instead of measuring the instability of hiding, it measures the exhaustion of being seen. The wound is not the closet; it is the stage.
+4. **Silence-to-Speech Transformation**: The act of breaking silence is itself the signal. The "what" is stated; the "why" and the "how much it costs" remain the substrate.
+
+### The Visibility Dials
+
+| $DIAL | If you turn it up | The visibility looks like |
+| --- | --- | --- |
+| $LORDE_VOICE | intersectional depth, biomythography | desire as survival technology |
+| $ARENAS_SCREAM | extreme exposure, political sacrifice | desire as total transparency |
+| $ACKER_PIRACY | piracy, fragmentation, terminal privacy | desire as stolen property |
+
+## A practical writing rule for QUEER (Expanded)
 
 **Never “announce” queerness; make the reader _infer it through the costs of concealment_.**  
 In other words: don’t foreground identity; foreground **constraint, risk, signal, and recognition**.

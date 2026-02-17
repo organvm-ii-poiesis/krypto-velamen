@@ -5,17 +5,25 @@ KRYPTO-VELAMEN (QV33R/QUEER) — a theory corpus and creative container
 for queer literary technique, archival practice, and the double-channel text.
 Field I: Present Waking. Organ II: POIESIS (Art).
 
-## Core Model: Double-Channel Text
-- Every piece of writing operates on two frequencies simultaneously
-- $SURFACE_STORY: publicly legible, atmospheric, complete on its own
-- $SUBSTRATE_STORY: queer-attuned reader detects desire, danger, recognition
-- Rule: Never announce queerness; make the reader infer it through
-  the costs of concealment
+## Core Model: Dual-Polarity Text
+- Every piece of writing operates on two frequencies simultaneously.
+- **Polarity A: Concealment Mode** (Classic Double-Channel)
+  - $SURFACE_STORY: publicly legible, atmospheric, complete on its own.
+  - $SUBSTRATE_STORY: queer-attuned reader detects desire, danger, recognition.
+  - Rule: Never announce queerness; make the reader infer it through the costs of concealment.
+- **Polarity B: Visibility Mode** (The Lorde/Arenas Inversion)
+  - The double channel is produced by intersectional depth and cultural excess.
+  - Signal is produced by the *toll of exposure* (exhaustion, rage, isolation).
+  - Rule: Announce everything; the substrate is the mythological or cosmological meaning that exceeds the audience's capacity to process the visible.
 
-## Three Author Dials
+## Three Author Dials (Concealment Mode)
 - $RIMBAUD_DRIFT: desire as weather (lyric fracture, sensory overload)
 - $WILDE_MASK: truth as performance (wit, ornament, paradox)
 - $BURROUGHS_CONTROL: desire under surveillance (systems, paranoia, mechanism)
+
+## Two Secondary Dials (Visibility Mode)
+- $LORDE_VOICE: intersectional depth (mythology as substrate, survival technology)
+- $ACKER_PIRACY: identity fragmentation (plagiarism as alibi, terminal privacy collapse)
 
 ## Six Craft Mechanisms
 1. Pronoun Drift / Referential Blur
