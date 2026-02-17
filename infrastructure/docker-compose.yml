@@ -53,16 +53,26 @@ services:
     depends_on:
       - neo4j
 
+  # The Spirit (Agent Swarm)
+  agent-swarm:
+    build:
+      context: ../services/agent-swarm
+      dockerfile: Dockerfile
+    environment:
+      - COMMUNITY_SERVICE_URL=http://community-service:8001/api
+    depends_on:
+      - community-service
+
   # Databases
   db-identity:
-    image: postgres:15-alphine
+    image: postgres:15-alpine
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=pass
       - POSTGRES_DB=identity
 
   db-community:
-    image: postgres:15-alphine
+    image: postgres:15-alpine
     environment:
       - POSTGRES_USER=user
       - POSTGRES_PASSWORD=pass
