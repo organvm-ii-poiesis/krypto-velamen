@@ -1,0 +1,82 @@
+version: '3.8'
+
+services:
+  # The Surface Story (Frontend)
+  web-platform:
+    build:
+      context: ../apps/web-platform
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - IDENTITY_SERVICE_URL=http://identity-service:8000
+      - COMMUNITY_SERVICE_URL=http://community-service:8001
+    depends_on:
+      - identity-service
+      - community-service
+
+  # The Mask (Auth & Profiles)
+  identity-service:
+    build:
+      context: ../services/identity-service
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db-identity:5432/identity
+    depends_on:
+      - db-identity
+
+  # The Substrate (Social & Collaboration)
+  community-service:
+    build:
+      context: ../services/community-service
+      dockerfile: Dockerfile
+    ports:
+      - "8001:8001"
+    environment:
+      - DATABASE_URL=postgresql://user:pass@db-community:5432/community
+      - REDIS_URL=redis://redis:6379/0
+    depends_on:
+      - db-community
+      - redis
+
+  # The Atlas (Knowledge Graph)
+  knowledge-graph:
+    build:
+      context: ../services/knowledge-graph
+      dockerfile: Dockerfile
+    ports:
+      - "8002:8002"
+    environment:
+      - NEO4J_URI=bolt://neo4j:7687
+    depends_on:
+      - neo4j
+
+  # Databases
+  db-identity:
+    image: postgres:15-alphine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=identity
+
+  db-community:
+    image: postgres:15-alphine
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=pass
+      - POSTGRES_DB=community
+
+  neo4j:
+    image: neo4j:5-community
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/password
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"

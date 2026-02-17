@@ -1,0 +1,44 @@
+openapi: 3.0.3
+info:
+  title: KRYPTO-VELAMEN Instrument API
+  description: The unified API for the living queer archive and community platform.
+  version: 1.0.0
+servers:
+  - url: http://api.krypto-velamen.art/v1
+paths:
+  /archive/fragments:
+    get:
+      summary: List all creative fragments
+      responses:
+        '200':
+          description: A list of fragments with metadata.
+    post:
+      summary: Scaffold a new fragment (CLI Proxy)
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                slug: {type: string}
+                preset: {type: string}
+  /identity/mask:
+    get:
+      summary: Get active user profile (The Mask)
+      responses:
+        '200':
+          description: User handle and privacy settings.
+  /community/threads:
+    get:
+      summary: Get active community discussions
+      parameters:
+        - name: topic_id
+          in: query
+          schema: {type: string}
+  /graph/discovery:
+    get:
+      summary: Get recommendations from the Atlas
+      parameters:
+        - name: mechanism
+          in: query
+          schema: {type: string}
