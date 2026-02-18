@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-QV33R Poiesis Orchestrator v3.4 — The Integrated Workspace Command Center.
-Evolution v1.4: Triforce Alignment & Metadata Polarity.
+QV33R Poiesis Orchestrator v3.5 — The Integrated Workspace Command Center.
+Evolution v1.5: Multi-Modal Ingestion & Sensory Metadata.
 """
 
 import argparse
@@ -100,7 +100,7 @@ def detect_reality_limit(data, content):
     return score >= 3
 
 def cmd_dashboard():
-    ui_header("QV33R POIESIS DASHBOARD v3.4")
+    ui_header("QV33R POIESIS DASHBOARD v3.5")
     total_files = len(list(PROJECT_ROOT.glob("**/*.md")))
     research_files = len(list(RESEARCH_DIR.glob("*.md")))
     draft_files = list(DRAFTS_DIR.glob("*.md"))
@@ -156,7 +156,9 @@ slug: "{args.slug}"
 version: {version}
 status: draft
 mode: {mode}
-triforce_polarity: {triforce}  # conscious | subconscious | temporal
+triforce_polarity: {triforce}
+media_type: "text"  # text | film | audio | visual | interactive
+time_index: "00:00"  # For time-based media
 
 # --- Author Dials (0-100) ---
 {dial_block}
@@ -198,7 +200,7 @@ def cmd_validate(args):
         return
 
     errors = []
-    required = ["date", "slug", "version", "status", "mode", "triforce_polarity"]
+    required = ["date", "slug", "version", "status", "mode", "triforce_polarity", "media_type", "time_index"]
     for f in required:
         if f not in data: errors.append(f"Missing field: {f}")
     
@@ -223,7 +225,7 @@ def cmd_display(args):
     content = frag_match.group(1).strip() if frag_match else "EMPTY"
     content = content.replace("_Write here._", "").strip()
     
-    header = f"{data.get('triforce_polarity', 'system').upper()} // {data.get('slug', 'unnamed').upper()} // v{data.get('version', '0.0')}"
+    header = f"{data.get('triforce_polarity', 'system').upper()} // {data.get('slug', 'unnamed').upper()} // v{data.get('version', '0.0')} // {data.get('media_type', 'TEXT')}"
     digital_display(content, header=header)
 
 def cmd_flip(args):
@@ -257,7 +259,7 @@ def cmd_atomize(args):
     else: rprint("  (No in-line particles found.)")
 
 def main():
-    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.4")
+    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.5")
     subparsers = parser.add_subparsers(dest="command", help="Commands")
     subparsers.add_parser("dashboard", help="Project status")
     scaffold_p = subparsers.add_parser("scaffold", help="Create new fragment")

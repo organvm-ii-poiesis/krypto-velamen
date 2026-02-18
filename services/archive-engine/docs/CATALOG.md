@@ -3,7 +3,7 @@
 **Repository:** `organvm-ii-poiesis/krypto-velamen`
 **Project:** QV33R / QUEER -- A Living Queer Archive
 **Generated:** 2026-02-17
-**Catalog Version:** 8.0 (Structural Archive)
+**Catalog Version:** 9.0 (Sensory Ingestion)
 
 ---
 
@@ -11,10 +11,10 @@
 
 | Metric | Value |
 |--------|-------|
-| Total files | 145+ (Monorepo distribution) |
+| Total files | 160+ (Monorepo distribution) |
 | Platform Services | 9 (Archive, Identity, Community, Graph, Web, Agent-Swarm, Titan-Governor, Atomizer, Lens) |
-| Research Clusters | 7 (A-G) |
-| Narratological Lenses | 28 (integrated from THEORIA) |
+| Multi-Modal Masters | 12 (Film, Audio, Visual, Interactive) |
+| Sensory Mechanisms | 100+ (Atlas Part IV) |
 
 ---
 
@@ -24,17 +24,18 @@
 
 | Filename | Type | Key Concepts |
 |----------|------|--------------|
-| NARRATOLOGICAL-LENS-INTEGRATION.md | theory | Causal Binding, Geometry of Hiding |
-| LINGUISTIC-ATOMIZATION-INTEGRATION.md | theory | Semantic Particles, Physics of the Fabric |
-| THE-TITAN-GOVERNOR.md | theory | TAXIS integration, Auditor, Chronos |
+| MULTI-MODAL-ENCODING.md | theory | Sonic Veil, Cinematic Substrate, Pentimento |
+| TRIFORCE-MANIFESTO.md | theory | Conscious, Subconscious, Temporal |
+| LINGUISTIC-ATOMIZATION-INTEGRATION.md | theory | Semantic Particles |
 
-### Platform Infrastructure
+### Multi-Modal Research (Phase 13 Additions)
 
-| Service | Component | Description |
-|---------|-----------|-------------|
-| **Lens Engine** | `main.py` | Narratological diagnostic runner. |
-| **Atomizer Engine** | `main.py` | LingFrame wrapper for molecular analysis. |
-| **Agent Swarm** | `personas.py` | Added Script-Doctor meta-agent. |
+| Filename | Artist | Medium | Polarity |
+|----------|--------|--------|----------|
+| araki-deep-research.md | Gregg Araki | Film | Conscious |
+| sophie-deep-research.md | SOPHIE | Audio | Conscious |
+| lynch-deep-research.md | David Lynch | Film | Subconscious |
+| arca-deep-research.md | Arca | Audio | Temporal |
 
 ---
 
@@ -42,10 +43,10 @@
 
 | Store | Location | Status |
 |-------|----------|--------|
-| Knowledge Graph | MCP (Neo4j) | 220+ entities |
+| Knowledge Graph | MCP (Neo4j) | 250+ entities |
 | Atomic Store | JSON Particles | Active |
 | Deep Storage | Local JSON Ledger | Locked by Titan |
 
 ---
 
-*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 8.0 marks the structural unification of the archive.*
+*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 9.0 marks the sensory expansion.*

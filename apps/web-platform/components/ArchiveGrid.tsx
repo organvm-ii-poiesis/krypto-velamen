@@ -2,14 +2,27 @@
 
 import React from 'react'
 
+import { Film, Music, Type, Eye, Terminal } from 'lucide-react'
+
 interface Fragment {
   id: string
   slug: string
   version: number
   mode: 'concealment' | 'visibility'
   triforce_polarity: 'conscious' | 'subconscious' | 'temporal'
+  media_type: 'text' | 'film' | 'audio' | 'visual' | 'interactive'
   date: string
   decay_level?: number
+}
+
+const MediaIcon = ({ type }: { type: Fragment['media_type'] }) => {
+  switch (type) {
+    case 'film': return <Film size={14} className="text-yellow-500" />
+    case 'audio': return <Music size={14} className="text-blue-500" />
+    case 'visual': return <Eye size={14} className="text-magenta-500" />
+    case 'interactive': return <Terminal size={14} className="text-cyan-500" />
+    default: return <Type size={14} className="opacity-50" />
+  }
 }
 
 export default function ArchiveGrid({ fragments }: { fragments: Fragment[] }) {
@@ -31,7 +44,10 @@ export default function ArchiveGrid({ fragments }: { fragments: Fragment[] }) {
           />
 
           <div className="flex justify-between items-center mb-2">
-            <div className="text-[10px] opacity-50">{frag.date}</div>
+            <div className="flex items-center gap-2">
+              <MediaIcon type={frag.media_type} />
+              <div className="text-[10px] opacity-50">{frag.date}</div>
+            </div>
             <div className="text-[10px] bg-green-900 px-1 text-green-400">v{frag.version}</div>
           </div>
           

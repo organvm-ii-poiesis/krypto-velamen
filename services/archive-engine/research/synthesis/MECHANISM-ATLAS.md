@@ -1148,4 +1148,30 @@ These authors operate across cluster boundaries, combining mechanisms from multi
 - Difference as Dialectical Resource --- Lorde primary
 - Strategic Outsiderhood --- Lorde primary
 
-**Shared signature**: The writer is visible on all axes simultaneously. The encoding operates not through what is hidden but through what exceeds any single reader's capacity to hold. The affect cost is the cost of exposure (exhaustion, rage, isolation), not the cost of concealment (instability, displacement, mechanization). The schema persists but its polarity inverts: the double channel is produced by excess rather than absence.
+## Part IV: Multi-Modal & Sensory Mechanisms
+
+---
+
+### 97. Sonic Masking / Frequency Displacement
+**Definition**: Using specific audio frequencies (ultrasonic, phase cancellation) or rhythmic layers to conceal an emotional substrate. The "meaning" is only audible to listeners with the right hardware or psychological attunement.
+**Authors**: SOPHIE (Hyper-pop synthesis), Wendy Carlos (Synthesizer as gender-mask), Arca (Deconstructed noise)
+**Dial Activation**: Rimbaud primary | Wilde rare | Burroughs primary
+**Craft Rule**: Encode the desire in the frequency range the dominant culture ignores. Use noise to protect the signal.
+
+### 98. Long-Take Pressure (The Tarkovsky Hold)
+**Definition**: Holding a shot significantly longer than the narrative information warrants. The duration creates a somatic "pressure" that forces the viewer's subconscious to surface.
+**Authors**: Tarkovsky, Kubrick, Chantal Akerman
+**Dial Activation**: Rimbaud primary | Wilde rare | Burroughs moderate
+**Craft Rule**: Force the audience to inhabit time until the surface story breaks. The resistance of the image is the substrate signal.
+
+### 99. Visual Pentimento (Hidden Layers)
+**Definition**: The presence of an earlier image, partially visible beneath the surface of a finished work. A visual literalization of the double-channel text.
+**Authors**: Francis Bacon (Wounded male body beneath blur), Claude Cahun (Persona layers), Derek Jarman (*Blue*)
+**Dial Activation**: Rimbaud moderate | Wilde primary | Burroughs rare
+**Craft Rule**: Build the surface over a "wound." Let the ghost of the substrate be visible through the paint or the edit.
+
+### 100. Interface as Somatic Link (Hypertext Wound)
+**Definition**: Mechanics that require the user to interact with their own body or the digital interface in a way that mirrors the substrate trauma.
+**Authors**: Porpentine (*WTWLA*), Ice-Pick Lodge (*Pathologic*)
+**Dial Activation**: Rimbaud moderate | Wilde rare | Burroughs primary
+**Craft Rule**: Break the fourth wall. If the archive is a tool, make the tool hurt. The interaction is the confession.
