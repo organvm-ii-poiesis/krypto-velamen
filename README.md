@@ -35,6 +35,7 @@ graph TD
     Services --> Swarm[agent-swarm (The Spirit)]
     Services --> Titan[titan-governor (The Law)]
     Services --> Atomizer[atomizer-engine (The Molecular)]
+    Services --> Lens[lens-engine (The Geometry)]
 ```
 
 ### 📂 Directory Structure
@@ -46,9 +47,10 @@ graph TD
 | **`services/identity-service`** | **The Mask** | User profiles, authentication, and privacy calibration. |
 | **`services/community-service`** | **The Substrate** | Forums, DMs, and collaborative co-authoring tools. |
 | **`services/knowledge-graph`** | **The Atlas** | Recommendation engine mapping connections across the archive. |
-| **`services/agent-swarm`** | **The Spirit** | AI agents based on researched author clusters. |
+| **`services/agent-swarm`** | **The Spirit** | AI agents and the SCRIPT-DOCTOR meta-agent. |
 | **`services/titan-governor`** | **The Law** | Governance and auditing from Organ IV (TAXIS). |
 | **`services/atomizer-engine`** | **The Molecular** | Linguistic atomization from Organ I (THEORIA). |
+| **`services/lens-engine`** | **The Geometry** | Narratological lenses from Organ I (THEORIA). |
 
 ---
 
@@ -59,13 +61,6 @@ graph TD
 - Node.js 18+
 - Docker
 
-### The Archive Engine (Legacy Core)
-To interact with the original research and creative tools:
-```bash
-cd services/archive-engine
-python tools/orchestrator.py dashboard
-```
-
 ---
 
 ## 🔮 Roadmap: The Awakening
@@ -73,7 +68,8 @@ python tools/orchestrator.py dashboard
 1.  **Phase 7: Automated Animism** — Launched the `agent-swarm`.
 2.  **Phase 8: Titan Governance** — Installed the `titan-governor`.
 3.  **Phase 9: The Metabolic Awakening** — Fragments now decay if not witnessed.
-4.  **Phase 10: The Semantic Particle** — **[ACTIVE]** Integrating LingFrame for molecular analysis.
+4.  **Phase 10: The Semantic Particle** — Molecular analysis with LingFrame.
+5.  **Phase 11: The Structural Lens** — **[ACTIVE]** Dramaturgical diagnostics with Narratological Lenses.
 
 ---
 

@@ -3,7 +3,7 @@
 **Repository:** `organvm-ii-poiesis/krypto-velamen`
 **Project:** QV33R / QUEER -- A Living Queer Archive
 **Generated:** 2026-02-17
-**Catalog Version:** 7.0 (Molecular Archive)
+**Catalog Version:** 8.0 (Structural Archive)
 
 ---
 
@@ -11,10 +11,10 @@
 
 | Metric | Value |
 |--------|-------|
-| Total files | 130+ (Monorepo distribution) |
-| Platform Services | 8 (Archive, Identity, Community, Graph, Web, Agent-Swarm, Titan-Governor, Atomizer) |
+| Total files | 145+ (Monorepo distribution) |
+| Platform Services | 9 (Archive, Identity, Community, Graph, Web, Agent-Swarm, Titan-Governor, Atomizer, Lens) |
 | Research Clusters | 7 (A-G) |
-| Atomic Particles | ~5,000+ (tracked via Atomizer) |
+| Narratological Lenses | 28 (integrated from THEORIA) |
 
 ---
 
@@ -24,17 +24,17 @@
 
 | Filename | Type | Key Concepts |
 |----------|------|--------------|
+| NARRATOLOGICAL-LENS-INTEGRATION.md | theory | Causal Binding, Geometry of Hiding |
 | LINGUISTIC-ATOMIZATION-INTEGRATION.md | theory | Semantic Particles, Physics of the Fabric |
 | THE-TITAN-GOVERNOR.md | theory | TAXIS integration, Auditor, Chronos |
-| FIELD-III-TEMPORAL-ANTAGONISM.md | theory | Deep Storage, Myth, Futurism |
 
 ### Platform Infrastructure
 
 | Service | Component | Description |
 |---------|-----------|-------------|
+| **Lens Engine** | `main.py` | Narratological diagnostic runner. |
 | **Atomizer Engine** | `main.py` | LingFrame wrapper for molecular analysis. |
-| **Titan Governor** | `main.py` | Governance & Audit interface. |
-| **Agent Swarm** | `personas.py` | AI Agents embodying author dials. |
+| **Agent Swarm** | `personas.py` | Added Script-Doctor meta-agent. |
 
 ---
 
@@ -42,10 +42,10 @@
 
 | Store | Location | Status |
 |-------|----------|--------|
-| Knowledge Graph | MCP (Neo4j) | 200+ entities |
+| Knowledge Graph | MCP (Neo4j) | 220+ entities |
 | Atomic Store | JSON Particles | Active |
 | Deep Storage | Local JSON Ledger | Locked by Titan |
 
 ---
 
-*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 7.0 marks the descent to the molecular level.*
+*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 8.0 marks the structural unification of the archive.*

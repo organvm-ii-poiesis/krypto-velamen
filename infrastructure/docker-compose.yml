@@ -89,6 +89,18 @@ services:
     depends_on:
       - archive-engine
 
+  # The Geometry (Lens Engine)
+  lens-engine:
+    build:
+      context: ../services/lens-engine
+      dockerfile: Dockerfile
+    ports:
+      - "8006:8006"
+    environment:
+      - ARCHIVE_SERVICE_URL=http://archive-engine:8000
+    depends_on:
+      - archive-engine
+
   # Databases
   db-identity:
     image: postgres:15-alpine

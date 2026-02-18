@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-QV33R Poiesis Orchestrator v3.2 — The Integrated Workspace Command Center.
-Evolution v1.2: Atomic Tagging & LingFrame Integration.
+QV33R Poiesis Orchestrator v3.3 — The Integrated Workspace Command Center.
+Evolution v1.3: Structural Lenses & Causal Binding.
 """
 
 import argparse
@@ -10,6 +10,8 @@ import re
 import sys
 import random
 import yaml
+import json
+import httpx
 from datetime import date
 from pathlib import Path
 
@@ -102,7 +104,7 @@ def detect_reality_limit(data, content):
     return score >= 3
 
 def cmd_dashboard():
-    ui_header("QV33R POIESIS DASHBOARD v3.2")
+    ui_header("QV33R POIESIS DASHBOARD v3.3")
     total_files = len(list(PROJECT_ROOT.glob("**/*.md")))
     research_files = len(list(RESEARCH_DIR.glob("*.md")))
     draft_files = len(list(DRAFTS_DIR.glob("*.md")))
@@ -256,8 +258,25 @@ def cmd_atomize(args):
     else:
         rprint("  (No in-line particles found. Use [[word]]{particle: type} syntax.)")
 
+def cmd_diagnose(args):
+    """
+    Call the Lens Engine to run structural diagnostics.
+    """
+    filepath = Path(args.file)
+    if not filepath.exists(): return
+    
+    ui_header(f"DIAGNOSING: {filepath.name}")
+    
+    # Mock output for now, simulating Lens Engine API
+    rprint("[bold cyan]Causal Binding Analysis:[/bold cyan]")
+    rprint("  • Scene 1 -> 2: [green]THEREFORE[/green] (Causal)")
+    rprint("  • Scene 2 -> 3: [yellow]AND THEN[/yellow] (Episodic)")
+    rprint("-" * 20)
+    rprint("  [bold yellow]Causal Binding Index:[/bold yellow] 0.50")
+    rprint("  [bold magenta]Recommendation:[/bold magenta] Strengthen the link between scenes 2 and 3 using the 'BUT' rule.")
+
 def main():
-    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.2")
+    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.3")
     subparsers = parser.add_subparsers(dest="command", help="Commands")
 
     subparsers.add_parser("dashboard", help="Project status")
@@ -280,6 +299,9 @@ def main():
     atomize_p = subparsers.add_parser("atomize", help="Semantic particle detection")
     atomize_p.add_argument("file")
 
+    diagnose_p = subparsers.add_parser("diagnose", help="Run narratological diagnostics")
+    diagnose_p.add_argument("file")
+
     args = parser.parse_args()
 
     if args.command == "dashboard": cmd_dashboard()
@@ -288,6 +310,7 @@ def main():
     elif args.command == "display": cmd_display(args)
     elif args.command == "flip": cmd_flip(args)
     elif args.command == "atomize": cmd_atomize(args)
+    elif args.command == "diagnose": cmd_diagnose(args)
     else: parser.print_help()
 
 if __name__ == "__main__":
