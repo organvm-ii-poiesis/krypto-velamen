@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-QV33R Poiesis Orchestrator v3.1 — The Integrated Workspace Command Center.
-Evolution v1.1: Reality Limit Detection & Consolidated Logic.
+QV33R Poiesis Orchestrator v3.2 — The Integrated Workspace Command Center.
+Evolution v1.2: Atomic Tagging & LingFrame Integration.
 """
 
 import argparse
@@ -102,7 +102,7 @@ def detect_reality_limit(data, content):
     return score >= 3
 
 def cmd_dashboard():
-    ui_header("QV33R POIESIS DASHBOARD v3.1")
+    ui_header("QV33R POIESIS DASHBOARD v3.2")
     total_files = len(list(PROJECT_ROOT.glob("**/*.md")))
     research_files = len(list(RESEARCH_DIR.glob("*.md")))
     draft_files = len(list(DRAFTS_DIR.glob("*.md")))
@@ -233,8 +233,31 @@ def cmd_flip(args):
     rprint(f"  [bold]Recommended Version:[/bold] v1.0 (The Descent)")
     rprint(f"  [bold]Dial Shift:[/bold] Turn up [magenta]$PHANTASM_OSCILLATION[/magenta]")
 
+def cmd_atomize(args):
+    """
+    Call the Atomizer Engine to process a fragment.
+    """
+    filepath = Path(args.file)
+    if not filepath.exists(): return
+    
+    ui_header(f"ATOMIZING: {filepath.name}")
+    
+    # In a real app, we'd hit the API
+    # Here we'll simulate the call or just output the concept
+    rprint("[bold cyan]Semantic Particles Detected:[/bold cyan]")
+    
+    text = filepath.read_text(encoding="utf-8")
+    # Find tagged atoms: [[word]]{particle: type}
+    tags = re.findall(r"\[\[(.*?)\]\]\{particle:\s*(.*?)\}", text)
+    
+    if tags:
+        for word, p_type in tags:
+            rprint(f"  • [yellow]{word}[/yellow] -> [magenta]{p_type}[/magenta]")
+    else:
+        rprint("  (No in-line particles found. Use [[word]]{particle: type} syntax.)")
+
 def main():
-    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.1")
+    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.2")
     subparsers = parser.add_subparsers(dest="command", help="Commands")
 
     subparsers.add_parser("dashboard", help="Project status")
@@ -254,6 +277,9 @@ def main():
     flip_p = subparsers.add_parser("flip", help="Suggest Field II transformation")
     flip_p.add_argument("file")
 
+    atomize_p = subparsers.add_parser("atomize", help="Semantic particle detection")
+    atomize_p.add_argument("file")
+
     args = parser.parse_args()
 
     if args.command == "dashboard": cmd_dashboard()
@@ -261,6 +287,7 @@ def main():
     elif args.command == "validate": cmd_validate(args)
     elif args.command == "display": cmd_display(args)
     elif args.command == "flip": cmd_flip(args)
+    elif args.command == "atomize": cmd_atomize(args)
     else: parser.print_help()
 
 if __name__ == "__main__":

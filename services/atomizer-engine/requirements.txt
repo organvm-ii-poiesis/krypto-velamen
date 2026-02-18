@@ -1,0 +1,13 @@
+fastapi
+uvicorn
+pydantic
+pyyaml
+spacy
+nltk
+vaderSentiment
+scikit-learn
+pandas
+networkx
+strawberry-graphql
+httpx
+python-dotenv

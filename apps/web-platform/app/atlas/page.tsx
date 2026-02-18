@@ -42,6 +42,17 @@ export default function AtlasPage() {
               <li>• The Glitch (Mechanism)</li>
             </ul>
           </div>
+
+          <div className="border border-green-800 p-6 bg-green-900/5">
+            <h3 className="font-bold mb-4 uppercase text-xs tracking-widest text-green-400">Particle Cloud</h3>
+            <div className="flex flex-wrap gap-2">
+              <span className="text-xs px-1 border border-green-900 opacity-80">bright</span>
+              <span className="text-[10px] px-1 border border-green-900 opacity-40">shredder</span>
+              <span className="text-sm px-1 border border-green-900 text-white">desire</span>
+              <span className="text-xs px-1 border border-green-900 opacity-60">terminal</span>
+              <span className="text-[10px] px-1 border border-green-900 opacity-30">static</span>
+            </div>
+          </div>
         </aside>
       </div>
     </div>

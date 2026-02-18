@@ -3,7 +3,7 @@
 **Repository:** `organvm-ii-poiesis/krypto-velamen`
 **Project:** QV33R / QUEER -- A Living Queer Archive
 **Generated:** 2026-02-17
-**Catalog Version:** 6.0 (Titan Governance)
+**Catalog Version:** 7.0 (Molecular Archive)
 
 ---
 
@@ -11,10 +11,10 @@
 
 | Metric | Value |
 |--------|-------|
-| Total files | 120+ (Monorepo distribution) |
-| Platform Services | 7 (Archive, Identity, Community, Graph, Web, Agent-Swarm, Titan-Governor) |
+| Total files | 130+ (Monorepo distribution) |
+| Platform Services | 8 (Archive, Identity, Community, Graph, Web, Agent-Swarm, Titan-Governor, Atomizer) |
 | Research Clusters | 7 (A-G) |
-| Governance | TAXIS (Organ IV) integrated |
+| Atomic Particles | ~5,000+ (tracked via Atomizer) |
 
 ---
 
@@ -24,17 +24,17 @@
 
 | Filename | Type | Key Concepts |
 |----------|------|--------------|
+| LINGUISTIC-ATOMIZATION-INTEGRATION.md | theory | Semantic Particles, Physics of the Fabric |
 | THE-TITAN-GOVERNOR.md | theory | TAXIS integration, Auditor, Chronos |
 | FIELD-III-TEMPORAL-ANTAGONISM.md | theory | Deep Storage, Myth, Futurism |
-| COLLABORATION-PROTOCOL.md | theory | Co-authoring, Witness Protocol |
 
 ### Platform Infrastructure
 
 | Service | Component | Description |
 |---------|-----------|-------------|
+| **Atomizer Engine** | `main.py` | LingFrame wrapper for molecular analysis. |
 | **Titan Governor** | `main.py` | Governance & Audit interface. |
 | **Agent Swarm** | `personas.py` | AI Agents embodying author dials. |
-| **Web Platform** | `TerminalInterface.tsx` | Cyberpunk CLI in the browser. |
 
 ---
 
@@ -42,10 +42,10 @@
 
 | Store | Location | Status |
 |-------|----------|--------|
-| Knowledge Graph | MCP (memory graph) | 180+ entities |
-| Neon DB | project snowy-moon-43700360 | 15 tables |
+| Knowledge Graph | MCP (Neo4j) | 200+ entities |
+| Atomic Store | JSON Particles | Active |
 | Deep Storage | Local JSON Ledger | Locked by Titan |
 
 ---
 
-*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 6.0 marks the reign of the Titan.*
+*Catalog generated 2026-02-17 for KRYPTO-VELAMEN. Version 7.0 marks the descent to the molecular level.*

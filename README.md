@@ -30,8 +30,11 @@ graph TD
     
     Services --> Identity[identity-service (FastAPI)]
     Services --> Community[community-service (Django)]
-    Services --> Graph[knowledge-graph (NetworkX/Neo4j)]
+    Services --> Graph[knowledge-graph (Neo4j)]
     Services --> Archive[archive-engine (The Core Corpus)]
+    Services --> Swarm[agent-swarm (The Spirit)]
+    Services --> Titan[titan-governor (The Law)]
+    Services --> Atomizer[atomizer-engine (The Molecular)]
 ```
 
 ### 📂 Directory Structure
@@ -43,16 +46,18 @@ graph TD
 | **`services/identity-service`** | **The Mask** | User profiles, authentication, and privacy calibration. |
 | **`services/community-service`** | **The Substrate** | Forums, DMs, and collaborative co-authoring tools. |
 | **`services/knowledge-graph`** | **The Atlas** | Recommendation engine mapping connections across the archive. |
-| **`docs/`** | **Blueprints** | System architecture and platform documentation. |
+| **`services/agent-swarm`** | **The Spirit** | AI agents based on researched author clusters. |
+| **`services/titan-governor`** | **The Law** | Governance and auditing from Organ IV (TAXIS). |
+| **`services/atomizer-engine`** | **The Molecular** | Linguistic atomization from Organ I (THEORIA). |
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Python 3.10+
+- Python 3.11+
 - Node.js 18+
-- Docker (optional but recommended for full stack)
+- Docker
 
 ### The Archive Engine (Legacy Core)
 To interact with the original research and creative tools:
@@ -61,17 +66,14 @@ cd services/archive-engine
 python tools/orchestrator.py dashboard
 ```
 
-### The Platform (New)
-See `docs/architecture/SYSTEM_ARCHITECTURE.md` for full deployment guides.
-
 ---
 
 ## 🔮 Roadmap: The Awakening
 
-1.  **Phase 7: Automated Animism** — Launched the `agent-swarm` (The Spirit).
-2.  **Phase 8: Titan Governance** — Installed the `titan-governor` (The Law).
-3.  **Phase 9: The Metabolic Awakening** — **[ACTIVE]** Implementing the Entropy Engine. Fragments now decay if not witnessed. The archive is alive.
-4.  **Phase 10: Field Synthesis** — Final integration with CHTHON-ONEIROS.
+1.  **Phase 7: Automated Animism** — Launched the `agent-swarm`.
+2.  **Phase 8: Titan Governance** — Installed the `titan-governor`.
+3.  **Phase 9: The Metabolic Awakening** — Fragments now decay if not witnessed.
+4.  **Phase 10: The Semantic Particle** — **[ACTIVE]** Integrating LingFrame for molecular analysis.
 
 ---
 

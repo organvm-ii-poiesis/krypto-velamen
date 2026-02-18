@@ -14,7 +14,7 @@ export default function AtlasVis() {
             <br/>
             Neural link required for deep dive.
             <br/>
-            Processing 150+ entities...
+            Processing 150+ entities & 5000+ particles...
           </p>
         </div>
       </div>

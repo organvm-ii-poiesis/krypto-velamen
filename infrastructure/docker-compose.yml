@@ -77,6 +77,18 @@ services:
       - agent-swarm
       - knowledge-graph
 
+  # The Molecular (Atomizer Engine)
+  atomizer-engine:
+    build:
+      context: ../services/atomizer-engine
+      dockerfile: Dockerfile
+    ports:
+      - "8005:8005"
+    environment:
+      - ARCHIVE_SERVICE_URL=http://archive-engine:8000
+    depends_on:
+      - archive-engine
+
   # Databases
   db-identity:
     image: postgres:15-alpine
