@@ -7,6 +7,7 @@ interface Fragment {
   slug: string
   version: number
   mode: 'concealment' | 'visibility'
+  triforce_polarity: 'conscious' | 'subconscious' | 'temporal'
   date: string
   decay_level?: number
 }
@@ -33,6 +34,11 @@ export default function ArchiveGrid({ fragments }: { fragments: Fragment[] }) {
             <div className="text-[10px] opacity-50">{frag.date}</div>
             <div className="text-[10px] bg-green-900 px-1 text-green-400">v{frag.version}</div>
           </div>
+          
+          <div className="text-[8px] uppercase tracking-tighter mb-1 font-bold text-blue-400">
+            {frag.triforce_polarity}
+          </div>
+
           <h3 className="font-bold text-lg uppercase tracking-widest group-hover:text-white transition-colors">
             {frag.decay_level && frag.decay_level > 0.7 ? "[CORRUPTED]" : frag.slug}
           </h3>

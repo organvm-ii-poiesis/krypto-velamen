@@ -10,6 +10,7 @@ date: 2026-02-17
 slug: "the-chipped-mug"
 status: draft
 mode: concealment
+triforce_polarity: conscious
 
 # --- Author Dials (0-100) ---
 rimbaud_drift: 40

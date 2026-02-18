@@ -5,7 +5,20 @@ KRYPTO-VELAMEN (QV33R/QUEER) — a theory corpus and creative container
 for queer literary technique, archival practice, and the double-channel text.
 Field I: Present Waking. Organ II: POIESIS (Art).
 
-## Core Model: Dual-Polarity Text
+## Core Model: The Artistic Triforce
+The project is governed by a tripartite sorting system that organizes creative labor across three polarities:
+
+1. **The Conscious (Polarity I)**: Present-focused, autobiographical, and persona-based.
+   - *Goal*: To explore the self as it exists in real time.
+   - *Representative*: KRYPTO-VELAMEN (Field I).
+2. **The Subconscious (Polarity II)**: Present-focused, exploring the unconscious and the shadow self.
+   - *Goal*: To reveal what lies beneath waking life.
+   - *Representative*: CHTHON-ONEIROS (Field II).
+3. **The Temporal (Polarity III)**: Future and past-focused work rooted in myth, religion, and canon.
+   - *Goal*: To connect personal expression to collective narratives.
+   - *Representative*: THE ATLAS / CLUSTER G.
+
+## Dual-Polarity Text (Within Fields)
 - Every piece of writing operates on two frequencies simultaneously.
 - **Polarity A: Concealment Mode** (Classic Double-Channel)
   - $SURFACE_STORY: publicly legible, atmospheric, complete on its own.

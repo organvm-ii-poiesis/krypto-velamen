@@ -33,6 +33,23 @@ def audit_repository():
         "errors": 0
     }
 
+@app.get("/audit/triforce-balance")
+def audit_triforce_balance():
+    """
+    Titan checks for intentionality balance across Conscious, Subconscious, and Temporal polarities.
+    """
+    # Simulation: In prod, query the archive-engine metadata
+    return {
+        "balance": {
+            "conscious": 0.6,
+            "subconscious": 0.3,
+            "temporal": 0.1
+        },
+        "status": "ASYMMETRIC",
+        "alert": "ASYMMETRY DETECTED: Temporal polarity is under-represented.",
+        "recommendation": "Initiate Cluster G research or myth-making project."
+    }
+
 @app.get("/audit/fragment/{slug}")
 def audit_fragment(slug: str):
     """

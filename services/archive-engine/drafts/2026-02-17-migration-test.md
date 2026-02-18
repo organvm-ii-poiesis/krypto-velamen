@@ -11,6 +11,7 @@ slug: "migration-test"
 version: 0.4
 status: draft
 mode: concealment
+triforce_polarity: subconscious
 
 # --- Author Dials (0-100) ---
 rimbaud_drift: 70

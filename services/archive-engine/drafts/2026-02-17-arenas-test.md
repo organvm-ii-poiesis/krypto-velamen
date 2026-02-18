@@ -10,6 +10,7 @@ date: 2026-02-17
 slug: "arenas-test"
 status: draft
 mode: visibility
+triforce_polarity: conscious
 
 # --- Author Dials (0-100) ---
 lorde_voice: 0

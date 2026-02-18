@@ -10,6 +10,7 @@ date: 2026-02-17
 slug: "the-stage-exhaustion"
 status: draft
 mode: visibility
+triforce_polarity: temporal
 
 # --- Author Dials (0-100) ---
 lorde_voice: 80
