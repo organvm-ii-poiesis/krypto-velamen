@@ -66,12 +66,12 @@ See `docs/architecture/SYSTEM_ARCHITECTURE.md` for full deployment guides.
 
 ---
 
-## 🔮 Roadmap: Phase 6
+## 🔮 Roadmap: The Awakening
 
-1.  **Identity Service**: Implement OAuth 2.0 and "Handle" management.
-2.  **Community Service**: Launch the "Journal" module for user contributions.
-3.  **Knowledge Graph**: Visualize the connection between *Porpentine* (Topic 29) and *Rimbaud* (Cluster A).
-4.  **Web Platform**: Deploy the "False Front" landing page.
+1.  **Phase 7: Automated Animism** — Launched the `agent-swarm` (The Spirit).
+2.  **Phase 8: Titan Governance** — Installed the `titan-governor` (The Law).
+3.  **Phase 9: The Metabolic Awakening** — **[ACTIVE]** Implementing the Entropy Engine. Fragments now decay if not witnessed. The archive is alive.
+4.  **Phase 10: Field Synthesis** — Final integration with CHTHON-ONEIROS.
 
 ---
 

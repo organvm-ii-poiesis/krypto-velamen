@@ -14,7 +14,10 @@ class Journal(models.Model):
     mask_type = models.CharField(max_length=50, blank=True)
     affect_cost = models.CharField(max_length=50, blank=True)
     
+    # Metabolic Fields
     created_at = models.DateTimeField(auto_now_add=True)
+    last_witnessed = models.DateTimeField(auto_now=True)
+    decay_level = models.FloatField(default=0.0, help_text="0.0 (Fresh) to 1.0 (Corrupted)")
 
     def __str__(self):
         return f"{self.author_handle}: {self.title}"
