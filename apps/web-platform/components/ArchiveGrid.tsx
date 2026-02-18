@@ -5,6 +5,7 @@ import React from 'react'
 interface Fragment {
   id: string
   slug: string
+  version: number
   mode: 'concealment' | 'visibility'
   date: string
 }
@@ -15,19 +16,24 @@ export default function ArchiveGrid({ fragments }: { fragments: Fragment[] }) {
       {fragments.map((frag) => (
         <div 
           key={frag.id} 
-          className={`border p-4 transition-all cursor-pointer hover:scale-105 ${
+          className={`border p-4 transition-all cursor-pointer group ${
             frag.mode === 'visibility' 
               ? 'border-magenta-500 bg-magenta-900/10' 
               : 'border-green-800 bg-green-900/5'
           }`}
         >
-          <div className="text-[10px] opacity-50 mb-2">{frag.date}</div>
-          <h3 className="font-bold text-lg uppercase tracking-widest">{frag.slug}</h3>
+          <div className="flex justify-between items-center mb-2">
+            <div className="text-[10px] opacity-50">{frag.date}</div>
+            <div className="text-[10px] bg-green-900 px-1 text-green-400">v{frag.version}</div>
+          </div>
+          <h3 className="font-bold text-lg uppercase tracking-widest group-hover:text-white transition-colors">{frag.slug}</h3>
           <div className="mt-4 flex justify-between items-center">
             <span className="text-[10px] uppercase border px-1 border-current opacity-70">
               {frag.mode}
             </span>
-            <span className="text-xl">→</span>
+            <button className="text-[10px] py-1 px-2 border border-green-700 hover:bg-green-500 hover:text-black transition-colors">
+              WITNESS
+            </button>
           </div>
         </div>
       ))}

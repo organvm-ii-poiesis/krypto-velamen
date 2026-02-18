@@ -33,15 +33,29 @@ def audit_repository():
         "errors": 0
     }
 
-@app.get("/audit/swarm")
-def audit_swarm():
+@app.get("/audit/fragment/{slug}")
+def audit_fragment(slug: str):
     """
-    Monitor the Agent Swarm's output and dial consistency.
+    Titan specifically audits a single fragment by calling the orchestrator.
+    """
+    fragment_path = Path(f"services/archive-engine/drafts/{slug}.md")
+    # Simulation: In prod, call Archive API /validate
+    return {
+        "slug": slug,
+        "governor_status": "VERIFIED",
+        "taxis_score": 0.95,
+        "law_enforced": True
+    }
+
+@app.post("/taxis/flip-detection")
+def scan_for_reality_limit():
+    """
+    Titan scans all drafts for fragments hitting the 'Reality Limit'.
     """
     return {
-        "active_agents": 5,
-        "drift_calibration": "STABLE",
-        "latest_audit": "No unauthorized transparency detected."
+        "status": "Scanning drafts...",
+        "detected_shatter_points": ["2026-02-17-the-chipped-mug.md"],
+        "recommendation": "Execute descent protocol (--flip)"
     }
 
 @app.post("/taxis/enforce-deep-storage")

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-QV33R Poiesis Orchestrator v3.0 — The Integrated Workspace Command Center.
-Integrated with CHTHON-ONEIROS (Field II) logic.
+QV33R Poiesis Orchestrator v3.1 — The Integrated Workspace Command Center.
+Evolution v1.1: Reality Limit Detection & Consolidated Logic.
 """
 
 import argparse
@@ -9,6 +9,7 @@ import os
 import re
 import sys
 import random
+import yaml
 from datetime import date
 from pathlib import Path
 
@@ -26,12 +27,6 @@ except ImportError:
     HAS_RICH = False
     rprint = print  # Fallback
     console = None
-
-try:
-    import yaml
-except ImportError:
-    print("Error: PyYAML is required. Install with: pip install PyYAML>=6.0")
-    sys.exit(1)
 
 # --- Configuration ---
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
@@ -78,8 +73,7 @@ def digital_display(text, header="SYSTEM LOG"):
         )
         console.print(p)
     else:
-        print(f"[{header}]")
-        print(text)
+        print(f"[{header}]\n{text}")
 
 # --- Logic ---
 
@@ -92,8 +86,23 @@ def get_frontmatter(text):
             return None
     return None
 
+def detect_reality_limit(data, content):
+    """
+    Heuristic to suggest a Field Flip.
+    Triggers if affect_cost is low but content is long or fluent.
+    """
+    if not data or not content: return False
+    
+    # Heuristic: if plausible_deniability is too high (5) or affect_cost is too clinical
+    score = 0
+    if str(data.get('plausible_deniability')) == '5': score += 2
+    if 'clinical' in data.get('affect_cost', '').lower(): score += 1
+    if len(content.split()) > 300: score += 1
+    
+    return score >= 3
+
 def cmd_dashboard():
-    ui_header("QV33R POIESIS DASHBOARD v3.0")
+    ui_header("QV33R POIESIS DASHBOARD v3.1")
     total_files = len(list(PROJECT_ROOT.glob("**/*.md")))
     research_files = len(list(RESEARCH_DIR.glob("*.md")))
     draft_files = len(list(DRAFTS_DIR.glob("*.md")))
@@ -163,6 +172,12 @@ def cmd_validate(args):
     if not filepath.exists(): return
     text = filepath.read_text(encoding="utf-8")
     data = get_frontmatter(text)
+    
+    # Extract the fragment text for reality limit detection
+    frag_match = re.search(r"## The Fragment\s*\n(.*?)(?=\n---|\Z)", text, re.DOTALL)
+    content = frag_match.group(1).strip() if frag_match else ""
+    content = content.replace("_Write here._", "").strip()
+
     if not data:
         rprint("[bold red]Fail: No valid YAML found.[/bold red]")
         return
@@ -177,6 +192,10 @@ def cmd_validate(args):
         sys.exit(1)
     else:
         rprint("[bold green]✔ v{0} integrity verified.[/bold green]".format(data.get('version', '?.?')))
+        
+        # Reality Limit Check
+        if detect_reality_limit(data, content):
+            rprint("[bold yellow]⚠ REALITY LIMIT DETECTED:[/bold yellow] This fragment is too stable. Suggest migration via [cyan]--flip[/cyan].")
 
 def cmd_display(args):
     filepath = Path(args.file)
@@ -184,7 +203,6 @@ def cmd_display(args):
     text = filepath.read_text(encoding="utf-8")
     data = get_frontmatter(text)
     
-    # Extract the fragment text
     frag_match = re.search(r"## The Fragment\s*\n(.*?)(?=\n---|\Z)", text, re.DOTALL)
     content = frag_match.group(1).strip() if frag_match else "EMPTY"
     content = content.replace("_Write here._", "").strip()
@@ -203,7 +221,6 @@ def cmd_flip(args):
     substrate = data.get('substrate_story', 'Unknown Desire')
     surface = data.get('surface_story', 'Mundane Reality')
     
-    # Logic: suggest mapping substrate onto a new, distorted surface
     distortions = ["Glitch", "Nightmare", "Archetypal", "Void", "Phantasm"]
     new_surface = f"{random.choice(distortions)} version of {surface}"
     
@@ -217,7 +234,7 @@ def cmd_flip(args):
     rprint(f"  [bold]Dial Shift:[/bold] Turn up [magenta]$PHANTASM_OSCILLATION[/magenta]")
 
 def main():
-    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.0")
+    parser = argparse.ArgumentParser(description="Poiesis Orchestrator v3.1")
     subparsers = parser.add_subparsers(dest="command", help="Commands")
 
     subparsers.add_parser("dashboard", help="Project status")

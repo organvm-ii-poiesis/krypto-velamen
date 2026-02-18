@@ -2,12 +2,13 @@ import strawberry
 from fastapi import FastAPI
 from strawberry.fastapi import GraphQLRouter
 from typing import List, Optional
-import networkx as nx
-import json
-from pathlib import Path
+from neo4j import GraphDatabase
+import os
 
-# Load the graph built by ingest.py
-GRAPH_PATH = Path("graph_dump.json")
+# Configuration
+NEO4J_URI = os.environ.get("NEO4J_URI", "bolt://localhost:7687")
+NEO4J_USER = os.environ.get("NEO4J_USER", "neo4j")
+NEO4J_PASSWORD = os.environ.get("NEO4J_PASSWORD", "password")
 
 @strawberry.type
 class Node:
@@ -18,39 +19,42 @@ class Node:
 @strawberry.type
 class Query:
     @strawberry.field
-    def nodes(self, type: Optional[str] = None) -> List[Node]:
-        if not GRAPH_PATH.exists():
-            return []
-        with open(GRAPH_PATH, "r") as f:
-            data = json.load(f)
-        
-        result = []
-        for n in data["nodes"]:
-            if type is None or n.get("type") == type:
-                result.append(Node(id=n["id"], type=n.get("type"), path=n.get("path")))
-        return result
+    def nodes(self, label: str) -> List[Node]:
+        driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+        with driver.session() as session:
+            # Query by label (Author, Mechanism, Document)
+            result = session.run(f"MATCH (n:{label}) RETURN n")
+            nodes = []
+            for record in result:
+                n = record["n"]
+                nodes.append(Node(
+                    id=n.get("name") or n.get("id"),
+                    type=label,
+                    path=n.get("path")
+                ))
+        driver.close()
+        return nodes
 
     @strawberry.field
     def connections(self, node_id: str) -> List[Node]:
-        if not GRAPH_PATH.exists():
-            return []
-        # In a real app, we'd use nx.read_json or similar
-        with open(GRAPH_PATH, "r") as f:
-            data = json.load(f)
-        
-        # Simple adjacency lookup
-        neighbors = []
-        for edge in data["links"]:
-            if edge["source"] == node_id:
-                neighbors.append(edge["target"])
-            elif edge["target"] == node_id:
-                neighbors.append(edge["source"])
-        
-        result = []
-        for n in data["nodes"]:
-            if n["id"] in neighbors:
-                result.append(Node(id=n["id"], type=n.get("type"), path=n.get("path")))
-        return result
+        driver = GraphDatabase.driver(NEO4J_URI, auth=(NEO4J_USER, NEO4J_PASSWORD))
+        with driver.session() as session:
+            query = (
+                "MATCH (n {name: $id})--(m) RETURN m, labels(m)[0] as lbl "
+                "UNION "
+                "MATCH (n {id: $id})--(m) RETURN m, labels(m)[0] as lbl"
+            )
+            result = session.run(query, {"id": node_id})
+            nodes = []
+            for record in result:
+                m = record["m"]
+                nodes.append(Node(
+                    id=m.get("name") or m.get("id"),
+                    type=record["lbl"],
+                    path=m.get("path")
+                ))
+        driver.close()
+        return nodes
 
 schema = strawberry.Schema(Query)
 graphql_app = GraphQLRouter(schema)
@@ -60,4 +64,4 @@ app.include_router(graphql_app, prefix="/graphql")
 
 @app.get("/")
 def root():
-    return {"service": "knowledge-graph", "status": "active"}
+    return {"service": "knowledge-graph", "db": "neo4j", "status": "active"}

@@ -1,0 +1,7 @@
+networkx
+strawberry-graphql
+uvicorn
+fastapi
+pyyaml
+neo4j
+python-dotenv
