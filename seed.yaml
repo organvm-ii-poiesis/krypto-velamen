@@ -1,0 +1,23 @@
+# seed.yaml — Automation Contract for organvm-ii-poiesis/krypto-velamen
+# Schema: seed/v1.0
+# Generated: 2026-02-24 (IGNITION Sprint)
+
+schema_version: '1.0'
+organ: II
+organ_name: Art
+repo: krypto-velamen
+org: organvm-ii-poiesis
+metadata:
+  implementation_status: ACTIVE
+  tier: standard
+  promotion_status: LOCAL
+  last_validated: '2026-02-14'
+  generated: '2026-02-24'
+  sprint: IGNITION
+agents:
+- name: ci
+  trigger: on_push
+  workflow: .github/workflows/None
+  description: Continuous integration pipeline
+consumes: []
+subscriptions: []
